@@ -1,10 +1,15 @@
-
+var intel = 0;
+var wis = 0;
+var cha = 0;
+var lvl = 0;
+var moon = false;
 
 document.getElementById("submit").addEventListener("click", function() {
     var tempIntel = parseInt(document.getElementById("int").value);
     var tempWis = parseInt(document.getElementById("wis").value);
     var tempCha = parseInt(document.getElementById("cha").value);
     var tempLvl = parseInt(document.getElementById("lvl").value);
+    var tempMoon = document.getElementById("moon").checked;
     
     //check int wis and cha for numbers
     if (isNaN(tempIntel) || isNaN(tempWis) || isNaN(tempCha)){
@@ -27,6 +32,31 @@ document.getElementById("submit").addEventListener("click", function() {
         console.log("wis: " + tempWis);
         console.log("cha: " + tempCha);
         console.log("Level: " + tempLvl);
+        console.log("Moon: " + tempMoon);
+        
+        intel = tempIntel;
+        wis = tempWis;
+        cha = tempCha;
+        lvl = tempLvl;
+        moon = tempMoon;
     }
 
+
   });
+
+function findMaxCR(level){
+    var CR = 0;
+    if (moon){
+        if(level < 6){
+            CR = 1;
+        }
+        else {
+            CR = level / 3;
+        }
+
+    }
+
+    return CR;
+}
+
+console.log(findMaxCR(lvl))
