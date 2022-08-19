@@ -28,6 +28,7 @@ document.getElementById("submit").addEventListener("click", function() {
         alert("Level should be a number between 2 and 20");
     }
     else {
+        //print to console to check
         console.log("int: " + tempIntel);
         console.log("wis: " + tempWis);
         console.log("cha: " + tempCha);
@@ -43,6 +44,8 @@ document.getElementById("submit").addEventListener("click", function() {
 
     function findMaxCR(level){
         var CR = 0;
+
+        //formula for druid wild shape Calculation
         if (moon){
             if(level < 6){
                 CR = 1;
