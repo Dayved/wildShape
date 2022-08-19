@@ -41,22 +41,30 @@ document.getElementById("submit").addEventListener("click", function() {
         moon = tempMoon;
     }
 
-
-  });
-
-function findMaxCR(level){
-    var CR = 0;
-    if (moon){
-        if(level < 6){
-            CR = 1;
+    function findMaxCR(level){
+        var CR = 0;
+        if (moon){
+            if(level < 6){
+                CR = 1;
+            }
+            else {
+                CR = parseInt(level / 3);
+            }
         }
         else {
-            CR = level / 3;
+            if (level < 4){
+                CR = .25;
+            }
+            else if (level < 8){
+                CR = .5;
+            }
+            else {
+                CR = 1;
+            }
         }
 
+        return CR;
     }
 
-    return CR;
-}
-
-console.log(findMaxCR(lvl))
+    console.log("CR: " + findMaxCR(lvl));
+});
