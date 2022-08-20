@@ -1,8 +1,11 @@
+import * as animals from "wildAnimals.json";
 var intel = 0;
 var wis = 0;
 var cha = 0;
 var lvl = 0;
 var moon = false;
+
+console.log(animals);
 
 document.getElementById("submit").addEventListener("click", function() {
     var tempIntel = parseInt(document.getElementById("int").value);
