@@ -58,11 +58,11 @@ function initApplication(){
     }
     else {
         //print to console to check
-        console.log("int: " + tempIntel);
+       /* console.log("int: " + tempIntel);
         console.log("wis: " + tempWis);
         console.log("cha: " + tempCha);
         console.log("Level: " + tempLvl);
-        console.log("Moon: " + tempMoon);
+        console.log("Moon: " + tempMoon);*/
         
         intel = tempIntel;
         wis = tempWis;
@@ -98,12 +98,14 @@ function initApplication(){
         return CR;
     }
 
-    console.log("CR: " + findMaxCR(lvl));
+    //console.log("CR: " + findMaxCR(lvl));
     maxCR = findMaxCR(lvl);
+    
     getSkills(skillList);
-    for(var i = 0; i < skillList.length; i++){
+    /*for(var i = 0; i < skillList.length; i++){
         console.log(skillList[i] + ": " + skillChecked[i]);
-    }
+    }*/
 });
 }
+
 
