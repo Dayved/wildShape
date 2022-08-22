@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"
+  ></script>
+  <script src="wildAnimal.js"></script>
+  <script src="wildReview.js"></script>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
 <title>Wild Shape</title>
 </head>
 <body>
@@ -18,10 +30,88 @@
   <label for="moon"> Moon Circle Druid</label>
   <input type="checkbox" id="moon" name="moon" value="Circle"> <br>
   <br>
+  
+  <table>
+    <tr>
+      <th>Acrobatics</th>
+      <th>Animal Handling</th>
+      <th>Arcana</th>
+      <th>Athletics</th>
+      <th>Deception</th>
+      <th>History</th>
+      <th>Insight</th>
+      <th>Intimidation</th>
+      <th>Investigation</th>
+      <th>Medicine</th>
+      <th>Nature</th>
+      <th>Perception</th>
+      <th>Performance</th>
+      <th>Persuasion</th>
+      <th>Religion</th>
+      <th>Sleight of Hand</th>
+      <th>Stealth</th>
+      <th>Survival</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="Acrobatics">
+      </td>
+      <td>
+        <input type="checkbox" id="Animal Handling">
+      </td>
+      <td>
+        <input type="checkbox" id="Arcana">
+      </td>
+      <td>
+        <input type="checkbox" id="Athletics">
+      </td>
+      <td>
+        <input type="checkbox" id="Deception">
+      </td>
+      <td>
+        <input type="checkbox" id="History">
+      </td>
+      <td>
+        <input type="checkbox" id="Insight">
+      </td>
+      <td>
+        <input type="checkbox" id="Intimidation">
+      </td>
+      <td>
+        <input type="checkbox" id="Investigation">
+      </td>
+      <td>
+        <input type="checkbox" id="Medicine">
+      </td>
+      <td>
+        <input type="checkbox" id="Nature">
+      </td>
+      <td>
+        <input type="checkbox" id="Perception">
+      </td>
+      <td>
+        <input type="checkbox" id="Performance">
+      </td>
+      <td>
+        <input type="checkbox" id="Persuasion">
+      </td>
+      <td>
+        <input type="checkbox" id="Religion">
+      </td>
+      <td>
+        <input type="checkbox" id="Sleight of Hand">
+      </td>
+      <td>
+        <input type="checkbox" id="Stealth">
+      </td>
+      <td>
+        <input type="checkbox" id="Survival">
+      </td>
+    </tr>
+  </table>
+  <br>
   <button id="submit">Submit</button>
-
+  
 </body>
 
-<script src="wildReview.js"></script>
-<!--<script type="module" src="wildAnimal.json"></script>-->
 </html>

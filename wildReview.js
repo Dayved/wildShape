@@ -4,9 +4,12 @@ var cha = 0;
 var lvl = 0;
 var moon = false;
 
+$(document).ready(initApplication);
+
 console.log(animals);
 
-document.getElementById("submit").addEventListener("click", function() {
+function initApplication(){
+    document.getElementById("submit").addEventListener("click", function(){
     var tempIntel = parseInt(document.getElementById("int").value);
     var tempWis = parseInt(document.getElementById("wis").value);
     var tempCha = parseInt(document.getElementById("cha").value);
@@ -73,3 +76,4 @@ document.getElementById("submit").addEventListener("click", function() {
 
     console.log("CR: " + findMaxCR(lvl));
 });
+}
