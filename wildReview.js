@@ -110,9 +110,7 @@ function initApplication(){
 document.getElementById("vertical-menu").addEventListener("click", function(event){
     var pick = event.target.textContent;
     console.log(pick);
-  /*  if (document.getElementById("wildshape").textContent == "Home"){
-    console.log(document.getElementById("wildshape").textContent);
-    }*/
+    event.target.classList.toggle("active");
 });
 
 }
