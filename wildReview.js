@@ -3,6 +3,7 @@ var wis = 0;
 var cha = 0;
 var lvl = 0;
 var moon = false;
+var maxCR = 0;
 
 $(document).ready(initApplication);
 
@@ -75,5 +76,6 @@ function initApplication(){
     }
 
     console.log("CR: " + findMaxCR(lvl));
+    maxCR = findMaxCR(lvl);
 });
 }
