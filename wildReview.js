@@ -1,4 +1,3 @@
-import * as animals from "wildAnimals.json";
 var intel = 0;
 var wis = 0;
 var cha = 0;
