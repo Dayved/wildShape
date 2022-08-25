@@ -90,11 +90,33 @@ const animals =[
         "perception": 3}, 
     "senses":{
         "passive": 13}, 
-    "CR": ".25", 
+    "CR": ".5", 
     "features": {
         "Keen Smell": "The bear has advantage on Wisdom (Perception) checks that rely on smell."},
     "actions": {
         "Multiattack": "The bear makes two attacks: one with its bite and one with its claws.",
         "bite": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "1d6+2", "type": "piercing"},
-        "claws": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "2d4+2", "type": "slashing"}}}
+        "claws": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "2d4+2", "type": "slashing"}}},
+    
+    {"name":"Tiger", 
+    "size": "large", 
+    "AC": 12, 
+    "HP": 37,
+    "speed": 40,
+    "str": 17,
+    "dex": 15,
+    "con": 14,
+    "skills": {
+        "perception": 3,
+        "stealth": 6}, 
+    "senses":{
+        "darkvision": 60,
+        "passive": 13}, 
+    "CR": "1", 
+    "features": {
+        "Keen Smell": "The tiger has advantage on Wisdom (Perception) checks that rely on smell.",
+        "Pounce": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action."},
+    "actions": {
+        "bite": {"attack": "Melee", "toHit": 5, "reach": 5, "damage": "1d10+3", "type": "piercing"},
+        "claw": {"attack": "Melee", "toHit": 5, "reach": 5, "damage": "1d8+3", "type": "slashing"}}}
     ];
