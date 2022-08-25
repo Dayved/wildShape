@@ -138,7 +138,6 @@ function initApplication(){
     getAttributes(atrList);
     prof = getProf(lvl);
     
-    var wildShapes = [];
     //wildshape filter of animals according to CR, fly, and swim
     for (let i = 0; i < animals.length; i++){
         if(parseFloat(animals[i].CR) <= maxCR){
