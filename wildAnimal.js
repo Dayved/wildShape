@@ -53,6 +53,117 @@ const animals =[
     "actions": {
         "bite": {"attack": "Melee", "toHit": 0, "reach": 5, "damage": "1", "type": "piercing"}}},
     
+    {"name":"Cat",
+    "size": "tiny",
+    "AC": 12,
+    "HP": 2,
+    "speed": 40,
+    "climb": 30,
+    "str": 3,
+    "dex": 15,
+    "con": 10,
+    "skills": {
+        "perception": 3, 
+        "stealth": 4},
+    "senses":{
+        "passive": 13}, 
+    "CR": "0", 
+    "features": {
+        "Keen Smell": "The cat has advantage on Wisdom (Perception) checks that rely on smell."},
+    "actions": {
+        "claws": {"attack": "Melee", "toHit": 0, "reach": 5, "damage": "1", "type": "slashing"}}},
+    
+    {"name":"Crab",
+    "size": "tiny",
+    "AC": 11,
+    "HP": 2,
+    "speed": 20,
+    "swim": 20,
+    "str": 2,
+    "dex": 11,
+    "con": 10,
+    "skills": {
+        "stealth": 2},
+    "senses":{
+        "blindsight": 30,
+        "passive": 9}, 
+    "CR": "0", 
+    "features": {
+        "Amphibious": "The crab can breathe air and water."},
+    "actions": {
+        "claw": {"attack": "Melee", "toHit": 0, "reach": 5, "damage": "1", "type": "bludgeoning"}}},
+    
+    {"name":"Deer",
+    "size": "medium",
+    "AC": 13,
+    "HP": 4,
+    "speed": 50,
+    "str": 11,
+    "dex": 16,
+    "con": 11,
+    "senses":{
+        "passive": 12}, 
+    "CR": "0", 
+    "actions": {
+        "bite": {"attack": "Melee", "toHit": 2, "reach": 5, "damage": "1d4", "type": "piercing"}}},
+    
+    {"name":"Eagle",
+    "size": "small",
+    "AC": 12,
+    "HP": 3,
+    "speed": 10,
+    "fly": 60,
+    "str": 6,
+    "dex": 15,
+    "con": 10,
+    "skills": {
+        "perception": 2},
+    "senses":{
+        "passive": 14}, 
+    "CR": "0", 
+    "features": {
+        "Keen Sight": " The eagle has advantage on Wisdom (Perception) checks that rely on sight."},
+    "actions": {
+        "talons": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "1d4+2", "type": "slashing"}}},
+    
+    {"name":"Frog",
+    "size": "tiny",
+    "AC": 11,
+    "HP": 1,
+    "speed": 20,
+    "swim": 20,
+    "str": 1,
+    "dex": 13,
+    "con": 8,
+    "skills": {
+        "perception": 1,
+        "stealth": 3},
+    "senses":{
+        "darkvision": 30,
+        "passive": 11}, 
+    "CR": "0", 
+    "features": {
+        "Amphibious": "The frog can breathe air and water.",
+        "Standing Leap": "The frog's long jump is up to 10 feet and its high jump is up to 5 feet, with or without a running start."},
+    },
+
+    {"name":"Giant Fire Beetle",
+    "size": "small",
+    "AC": 13,
+    "HP": 4,
+    "speed": 30,
+    "str": 8,
+    "dex": 10,
+    "con": 12,
+    "senses":{
+        "blindsight": 30, 
+        "passive": 8}, 
+    "CR": "0", 
+    "features": {
+        "Illumination": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet."},
+    "actions": {
+        "bite": {"attack": "Melee", "toHit": 1, "reach": 5, "damage": "1d6-1", "type": "slashing"}}},
+    
     {"name":"Octopus",
     "size": "small",
     "AC": 12,
