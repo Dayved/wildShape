@@ -107,7 +107,12 @@ function initApplication(){
     }*/
 });
 
-document.getElementById("vertical-menu").addEventListener("click", function(event){
+var vertMenu = document.getElementById("vertical-menu")
+
+vertMenu.addEventListener("click", function(event){
+   for (let i = 0; i < vertMenu.children.length; i++){
+    vertMenu.children[i].className = "inactive";
+   }
     var pick = event.target.textContent;
     console.log(pick);
     event.target.classList.toggle("active");
