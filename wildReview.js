@@ -138,15 +138,16 @@ function initApplication(){
     getAttributes(atrList);
     prof = getProf(lvl);
     
+    var tempShapes = [];
     //wildshape filter of animals according to CR, fly, and swim
     for (let i = 0; i < animals.length; i++){
         if(parseFloat(animals[i].CR) <= maxCR){
             if (lvl > 7){
-                wildShapes.push(animals[i]);
+                tempShapes.push(animals[i]);
             }
             else if (lvl > 3){
                 if (typeof animals[i].fly === "undefined"){
-                    wildShapes.push(animals[i]);
+                    tempShapes.push(animals[i]);
                 }
                 else {
                     continue;
@@ -154,7 +155,7 @@ function initApplication(){
             }
             else {
                 if (typeof animals[i].fly === "undefined" && typeof animals[i].swim === "undefined"){
-                    wildShapes.push(animals[i]);
+                    tempShapes.push(animals[i]);
                 }
                 else {
                     continue;
@@ -162,7 +163,8 @@ function initApplication(){
             }
         }
     }
-    console.log(wildShapes);
+    console.log(tempShapes);
+    wildShapes = tempShapes;
     });
 
     var vertMenu = document.getElementById("vertical-menu")
