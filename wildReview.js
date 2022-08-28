@@ -64,6 +64,33 @@ function getProf(level){
     }
 }
 
+function findMaxCR(level){
+    var CR = 0;
+
+    //formula for druid wild shape Calculation
+    if (moon){
+        if(level < 6){
+            CR = 1;
+        }
+        else {
+            CR = parseInt(level / 3);
+        }
+    }
+    else {
+        if (level < 4){
+            CR = .25;
+        }
+        else if (level < 8){
+            CR = .5;
+        }
+        else {
+            CR = 1;
+        }
+    }
+
+    return CR;
+}
+
 function initApplication(){
     
     document.getElementById("submit").addEventListener("click", function(){
@@ -104,33 +131,6 @@ function initApplication(){
         moon = tempMoon;
     }
 
-    function findMaxCR(level){
-        var CR = 0;
-
-        //formula for druid wild shape Calculation
-        if (moon){
-            if(level < 6){
-                CR = 1;
-            }
-            else {
-                CR = parseInt(level / 3);
-            }
-        }
-        else {
-            if (level < 4){
-                CR = .25;
-            }
-            else if (level < 8){
-                CR = .5;
-            }
-            else {
-                CR = 1;
-            }
-        }
-
-        return CR;
-    }
-
     //console.log("CR: " + findMaxCR(lvl));
     maxCR = findMaxCR(lvl);
     
@@ -163,11 +163,22 @@ function initApplication(){
             }
         }
     }
-    console.log(tempShapes);
+    //console.log(tempShapes);
     wildShapes = tempShapes;
-    });
-
+    
     var vertMenu = document.getElementById("vertical-menu")
+
+    //clear vert menu of previous entires
+    while(vertMenu.hasChildNodes()){
+            vertMenu.removeChild(vertMenu.firstChild);
+        }
+    //populate vert menu with relevanet entries
+    for (let i = 0; i < wildShapes.length; i++){
+        const animal = document.createElement("a");
+        const animalInfo = document.createTextNode(wildShapes[i].name + " CR: " + wildShapes[i].CR);
+        animal.appendChild(animalInfo);
+        vertMenu.appendChild(animal);
+    }
     //highlight the selected element on the vert menu
     vertMenu.addEventListener("click", function(event){
        for (let i = 0; i < vertMenu.children.length; i++){
@@ -177,7 +188,8 @@ function initApplication(){
         console.log(pick);
         event.target.classList.toggle("active");
     });
-
+});
 }
+
 
 
