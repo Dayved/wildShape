@@ -46,6 +46,34 @@ function getAttributes(atrList){
     }
 }
 
+//turn the vert menu into a list of applicable animals
+function generateAnimals(vertMenu){
+    //clear vert menu of previous entires
+    while(vertMenu.hasChildNodes()){
+            vertMenu.removeChild(vertMenu.firstChild);
+        }
+    //populate vert menu with relevanet entries
+    for (let i = 0; i < wildShapes.length; i++){
+        const animal = document.createElement("a");
+        const animalInfo = document.createTextNode(wildShapes[i].name + " CR: " + wildShapes[i].CR);
+        animal.appendChild(animalInfo);
+        vertMenu.appendChild(animal);
+    }
+    //highlight the selected element on the vert menu
+    vertMenu.addEventListener("click", function(event){
+       for (let i = 0; i < vertMenu.children.length; i++){
+        vertMenu.children[i].className = "inactive";
+       }
+        var pick = event.target.textContent;
+        console.log(pick);
+        event.target.classList.toggle("active");
+        var animalPick = pick.split(" ");
+       console.log(animalPick[0]);
+
+    });
+};
+
+//formula for proficiency
 function getProf(level){
     if(level < 5){
         return 2;
@@ -93,102 +121,87 @@ function findMaxCR(level){
 
 function initApplication(){
     
-    document.getElementById("submit").addEventListener("click", function(){
-    var tempIntel = parseInt(getEl("int"));
-    var tempWis = parseInt(getEl("wis"));
-    var tempCha = parseInt(getEl("cha"));
-    var tempLvl = parseInt(getEl("lvl"));
-    var tempMoon = check("moon");
-    
-    //check int wis and cha for numbers
-    if (isNaN(tempIntel) || isNaN(tempWis) || isNaN(tempCha)){
-        alert("Intelligence, Wisdom, Charisma and level should be a number");
-    }
-    //check they are in the right range
-    else if ((tempIntel < 0 || tempIntel > 24) || (tempWis < 0 || tempWis > 24) || (tempCha < 0 || tempCha > 24)){
-        alert("Intelligence, Wisdom, and Charisma should be a number between 0 and 24");
-    }
-    //check level is a number
-    else if (isNaN(tempLvl)){
-        alert("Level should be a number");
-    }
-    //check level is in the right range
-    else if (tempLvl < 2 || tempLvl > 20){
-        alert("Level should be a number between 2 and 20");
-    }
-    else {
-        //print to console to check
-       /* console.log("int: " + tempIntel);
-        console.log("wis: " + tempWis);
-        console.log("cha: " + tempCha);
-        console.log("Level: " + tempLvl);
-        console.log("Moon: " + tempMoon);*/
+    document.getElementById("submit").addEventListener("click", function(event){
+        event.preventDefault();
+            window.history.back();
+        var tempIntel = parseInt(getEl("int"));
+        var tempWis = parseInt(getEl("wis"));
+        var tempCha = parseInt(getEl("cha"));
+        var tempLvl = parseInt(getEl("lvl"));
+        var tempMoon = check("moon");
         
-        intel = tempIntel;
-        wis = tempWis;
-        cha = tempCha;
-        lvl = tempLvl;
-        moon = tempMoon;
-    }
-
-    //console.log("CR: " + findMaxCR(lvl));
-    maxCR = findMaxCR(lvl);
-    
-    getSkills(skillList);
-    getAttributes(atrList);
-    prof = getProf(lvl);
-    
-    var tempShapes = [];
-    //wildshape filter of animals according to CR, fly, and swim
-    for (let i = 0; i < animals.length; i++){
-        if(parseFloat(animals[i].CR) <= maxCR){
-            if (lvl > 7){
-                tempShapes.push(animals[i]);
-            }
-            else if (lvl > 3){
-                if (typeof animals[i].fly === "undefined"){
-                    tempShapes.push(animals[i]);
-                }
-                else {
-                    continue;
-                }
-            }
-            else {
-                if (typeof animals[i].fly === "undefined" && typeof animals[i].swim === "undefined"){
-                    tempShapes.push(animals[i]);
-                }
-                else {
-                    continue;
-                }
-            }
+        //check int wis and cha for numbers
+        if (isNaN(tempIntel) || isNaN(tempWis) || isNaN(tempCha)){
+            alert("Intelligence, Wisdom, Charisma and level should be a number");
         }
-    }
-    //console.log(tempShapes);
-    wildShapes = tempShapes;
-    
-    var vertMenu = document.getElementById("vertical-menu")
-
-    //clear vert menu of previous entires
-    while(vertMenu.hasChildNodes()){
-            vertMenu.removeChild(vertMenu.firstChild);
+        //check they are in the right range
+        else if ((tempIntel < 0 || tempIntel > 24) || (tempWis < 0 || tempWis > 24) || (tempCha < 0 || tempCha > 24)){
+            alert("Intelligence, Wisdom, and Charisma should be a number between 0 and 24");
         }
-    //populate vert menu with relevanet entries
-    for (let i = 0; i < wildShapes.length; i++){
-        const animal = document.createElement("a");
-        const animalInfo = document.createTextNode(wildShapes[i].name + " CR: " + wildShapes[i].CR);
-        animal.appendChild(animalInfo);
-        vertMenu.appendChild(animal);
-    }
-    //highlight the selected element on the vert menu
-    vertMenu.addEventListener("click", function(event){
-       for (let i = 0; i < vertMenu.children.length; i++){
-        vertMenu.children[i].className = "inactive";
-       }
-        var pick = event.target.textContent;
-        console.log(pick);
-        event.target.classList.toggle("active");
-    });
-});
+        //check level is a number
+        else if (isNaN(tempLvl)){
+            alert("Level should be a number");
+        }
+        //check level is in the right range
+        else if (tempLvl < 2 || tempLvl > 20){
+            alert("Level should be a number between 2 and 20");
+        }
+        else {
+            //print to console to check
+           /* console.log("int: " + tempIntel);
+            console.log("wis: " + tempWis);
+            console.log("cha: " + tempCha);
+            console.log("Level: " + tempLvl);
+            console.log("Moon: " + tempMoon);*/
+
+            intel = tempIntel;
+            wis = tempWis;
+            cha = tempCha;
+            lvl = tempLvl;
+            moon = tempMoon;
+        
+            var tempShapes = [];
+            //wildshape filter of animals according to CR, fly, and swim
+            for (let i = 0; i < animals.length; i++){
+                if(parseFloat(animals[i].CR) <= maxCR){
+                    if (lvl > 7){
+                        tempShapes.push(animals[i]);
+                    }
+                    else if (lvl > 3){
+                        if (typeof animals[i].fly === "undefined"){
+                            tempShapes.push(animals[i]);
+                        }
+                        else {
+                            continue;
+                        }
+                    }
+                    else {
+                        if (typeof animals[i].fly === "undefined" && typeof animals[i].swim === "undefined"){
+                            tempShapes.push(animals[i]);
+                        }
+                        else {
+                            continue;
+                        }
+                    }
+                }
+            }
+
+            //console.log("CR: " + findMaxCR(lvl));
+            maxCR = findMaxCR(lvl);
+                
+            //get which skills and attributes were checked
+            getSkills(skillList);
+            getAttributes(atrList);
+            prof = getProf(lvl);
+            //console.log(tempShapes);
+            wildShapes = tempShapes;
+                
+            var vertMenu = document.getElementById("vertical-menu");
+                
+            generateAnimals(vertMenu);
+        }
+    }, false);
+
 }
 
 
