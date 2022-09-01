@@ -203,9 +203,19 @@ vertMenu.addEventListener("click", function(event){
      vertMenu.children[i].className = "inactive";
     }
     //get selected item
-     var pick = event.target.textContent;
-     console.log(pick);
-     event.target.classList.toggle("active");
+    var pick = event.target.textContent;
+    console.log(pick);
+    event.target.classList.toggle("active");
+    var aniPick = pick.split(" ");
+    var chosen;
+    for(let i = 0; i< animals.length; i++){
+       if(animals[i].name == aniPick[0]){
+           chosen = animals[i];
+       }
+    }
+    console.log(chosen);
+    var count = Object.keys(chosen).length;
+    console.log(count);
  });
 
 }

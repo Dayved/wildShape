@@ -572,7 +572,85 @@ const animals =[
         "Keen Hearing and Smell": "The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell."},
     "actions":{
         "Bite": {"attack": "Melee", "toHit": 3, "reach": 5, "damage": "1d6+1", "type": "piercing", "special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."}}},
-     
+    
+    {"name":"Mule",
+    "size": "Medium",
+    "AC": 10,
+    "HP": 11,
+    "speed": 40,
+    "str": 14,
+    "dex": 10,
+    "con": 13,
+    "senses":{
+        "passive": 10}, 
+    "CR": ".125",
+    "features": {
+        "Beast of Burden": "The mule is considered to be a Large animal for the purpose of determining its carrying capacity.",
+        "Sure-Footed": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone"},
+    "actions":{
+        "Hooves": {"attack": "Melee", "toHit": 2, "reach": 5, "damage": "1d4+2", "type": "bludgeoning"}}},
+    
+    {"name":"Poisonous Snake",
+    "size": "Tiny",
+    "AC": 13,
+    "HP": 2,
+    "speed": 30,
+    "swim": 30,
+    "str": 2,
+    "dex": 16,
+    "con": 11,
+    "senses":{
+        "blindsight":10,
+        "passive": 10}, 
+    "CR": ".125",
+    "actions":{
+        "Bite": {"attack": "Melee", "toHit": 5, "reach": 5, "damage": "1", "type": "piercing", "special": "The target must make a DC 10 Constitution saving throw, taking 5 (2d4) poison damage on a failed save, or half as much damage on a successful one."}}},
+    
+    {"name":"Pony",
+    "size": "Medium",
+    "AC": 10,
+    "HP": 11,
+    "speed": 40,
+    "str": 15,
+    "dex": 10,
+    "con": 13,
+    "senses":{
+        "passive": 10}, 
+    "CR": ".125",
+    "actions":{
+        "Hooves": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "2d4+2", "type": "bludgeoning"}}},
+    
+    {"name":"Axe Beak",
+    "size": "Large",
+    "AC": 11,
+    "HP": 19,
+    "speed": 50,
+    "str": 14,
+    "dex": 12,
+    "con": 12,
+    "senses":{
+        "passive": 10}, 
+    "CR": ".25",
+    "actions":{
+        "Beak": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "1d8+2", "type": "slashing"}}},
+    
+    {"name":"Boar",
+    "size": "Medium",
+    "AC": 11,
+    "HP": 11,
+    "speed": 40,
+    "str": 13,
+    "dex": 11,
+    "con": 12,
+    "senses":{
+        "passive": 9}, 
+    "CR": ".25",
+    "features":{
+        "Charge": "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+        "Relentless (Recharges after a Short or Long Rest)": "If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."},
+    "actions":{
+        "Tusk": {"attack": "Melee", "toHit": 3, "reach": 5, "damage": "1d6+1", "type": "slashing"}}},
+    
     {"name":"Black Bear", 
     "size": "Medium", 
     "AC": 11, 
