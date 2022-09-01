@@ -144,8 +144,7 @@ const animals =[
     "CR": "0", 
     "features": {
         "Amphibious": "The frog can breathe air and water.",
-        "Standing Leap": "The frog's long jump is up to 10 feet and its high jump is up to 5 feet, with or without a running start."},
-    },
+        "Standing Leap": "The frog's long jump is up to 10 feet and its high jump is up to 5 feet, with or without a running start."}},
 
     {"name":"Giant Fire Beetle",
     "size": "Small",
