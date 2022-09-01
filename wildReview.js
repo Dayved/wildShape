@@ -206,7 +206,7 @@ vertMenu.addEventListener("click", function(event){
     var pick = event.target.textContent;
     console.log(pick);
     event.target.classList.toggle("active");
-    var aniPick = pick.split(" ");
+    var aniPick = pick.split(" CR");
     var chosen;
     for(let i = 0; i< animals.length; i++){
        if(animals[i].name == aniPick[0]){

@@ -651,6 +651,54 @@ const animals =[
     "actions":{
         "Tusk": {"attack": "Melee", "toHit": 3, "reach": 5, "damage": "1d6+1", "type": "slashing"}}},
     
+    {"name":"Constrictor Snake",
+    "size": "Large",
+    "AC": 12,
+    "HP": 13,
+    "speed": 30,
+    "swim": 30,
+    "str": 15,
+    "dex": 14,
+    "con": 12,
+    "senses":{
+        "blindsight": 10,
+        "passive": 10}, 
+    "CR": ".25",
+    "actions":{
+        "Bite": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "1d6+2", "type": "piercing"},
+        "Constrict": {"attack": "Melee", "toHit": 4, "reach": 5, "damage": "1d8+2", "type": "bludgeoning", "special": "The target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."}}},
+    
+    {"name":"Draft Horse",
+    "size": "Large",
+    "AC": 10,
+    "HP": 19,
+    "speed": 40,
+    "str": 18,
+    "dex": 10,
+    "con": 12,
+    "senses":{
+        "passive": 10}, 
+    "CR": ".25",
+    "actions":{
+        "Hooves": {"attack": "Melee", "toHit": 6, "reach": 5, "damage": "2d4+2", "type": "bludgeoning"}}},
+    
+    {"name":"Elk",
+    "size": "Large",
+    "AC": 10,
+    "HP": 13,
+    "speed": 50,
+    "str": 16,
+    "dex": 10,
+    "con": 12,
+    "senses":{
+        "passive": 10}, 
+    "CR": ".25",
+    "features":{
+        "Charge": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."},
+    "actions":{
+        "Ram": {"attack": "Melee", "toHit": 5, "reach": 5, "damage": "1d6+3", "type": "bludgeoning"},
+        "Hooves": {"attack": "Melee", "toHit": 5, "reach": 5, "damage": "2d4+3", "type": "bludgeoning"}}},
+    
     {"name":"Black Bear", 
     "size": "Medium", 
     "AC": 11, 
