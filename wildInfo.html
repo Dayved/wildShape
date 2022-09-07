@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"
-  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <script src="wildAnimal.js"></script>
   <script src="wildReview.js"></script>
   <link rel="stylesheet" href="wildStyle.css">
 
-<title>Wild Shape</title>
+  <title>Wild Shape</title>
 </head>
+
 <body>
   <p>Intput the Intelligence, Wisdom, Charisma and level of your character</p>
   <p></p>
   <label for="int">Intelligence:</label><br>
-  <input type="text" id="int" maxlength = "2" size="1" value="0"><br>
+  <input type="text" id="int" maxlength="2" size="1" value="0"><br>
   <label for="wis">Wisdom:</label><br>
-  <input type="text" id="wis" maxlength = "2" size="1" value="0"><br>
+  <input type="text" id="wis" maxlength="2" size="1" value="0"><br>
   <label for="cha">Charisma:</label><br>
-  <input type="text" id="cha" maxlength = "2" size="1" value="0"><br>
+  <input type="text" id="cha" maxlength="2" size="1" value="0"><br>
   <label for="lvl">Level:</label><br>
-  <input type="text" id="lvl" maxlength = "2" size="1" value="2"><br>
+  <input type="text" id="lvl" maxlength="2" size="1" value="2"><br>
   <p></p>
   <label for="moon"> Moon Circle Druid</label>
   <input type="checkbox" id="moon" name="moon" value="Circle"> <br>
   <br>
   <p>Select the skills you are proficient with</p>
-  <table class = "player">
-    <tr> <!--18 skills-->
+  <table class="player">
+    <tr>
+      <!--18 skills-->
       <th>Acrobatics</th>
       <th>Animal Handling</th>
       <th>Arcana</th>
@@ -109,8 +109,9 @@
   <br>
   <p></p>
   <p>Select your proficent saving throws</p>
-  <table class = "player">
-    <tr> <!--6 saves-->
+  <table class="player">
+    <tr>
+      <!--6 saves-->
       <th>Strength</th>
       <th>Dexterity</th>
       <th>Constitution</th>
@@ -137,21 +138,21 @@
       <td>
         <input type="checkbox" id="Charisma">
       </td>
-      </tr>
+    </tr>
   </table>
   <br>
 
   <button id="submit">Submit</button>
   <p></p>
 
-  <div class="vertical-menu" id = "vertical-menu">
+  <div class="vertical-menu" id="vertical-menu">
     <a>Animals</a>
   </div>
 
-  <table class = "display">
+  <table class="display">
 
   </table>
-  
+
 </body>
 
 </html>
