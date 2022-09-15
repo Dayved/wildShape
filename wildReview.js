@@ -108,8 +108,20 @@ function convertCR(CR) {
     }
 }
 
+//take chosen animal and build table with correct stats
+function displayWildShape(displayTable, chosen){
+    var count = Object.keys(chosen).length;
+    for (let key of Object.keys(chosen)){
+        console.log(key);
+        var row = displayTable.insertRow(0);
+        var cell = row.insertCell(0);
+        cell.innerHTML = key;
+    }
+}
+
 function initApplication() {
     var vertMenu = document.getElementById("vertical-menu");
+    var displayTable = document.getElementById("display");
 
     document.getElementById("submit").addEventListener("click", function () {
         var tempIntel = parseInt(getEl("int"));
@@ -120,7 +132,7 @@ function initApplication() {
 
         //check int wis and cha for numbers
         if (isNaN(tempIntel) || isNaN(tempWis) || isNaN(tempCha)) {
-            alert("Intelligence, Wisdom, Charisma and level should be a number");
+            alert("Intelligence, Wisdom, and Charisma should be a number");
         }
         //check they are in the right range
         else if ((tempIntel < 0 || tempIntel > 24) || (tempWis < 0 || tempWis > 24) || (tempCha < 0 || tempCha > 24)) {
@@ -214,9 +226,9 @@ function initApplication() {
                 chosen = animals[i];
             }
         }
-        console.log(chosen);
-        var count = Object.keys(chosen).length;
-        console.log(count);
+        //console.log(chosen);
+
+        displayWildShape(displayTable, chosen);
     });//vertmenu ends
 
 }
