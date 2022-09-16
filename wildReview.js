@@ -220,7 +220,7 @@ function initApplication() {
         }
         //get selected item
         var pick = event.target.textContent;
-        console.log(pick);
+        //console.log(pick);
         event.target.classList.toggle("active");
         var aniPick = pick.split(" CR");
         var chosen;
@@ -229,7 +229,7 @@ function initApplication() {
                 chosen = animals[i];
             }
         }
-        console.log(chosen);
+        //console.log(chosen);
 
         displayWildShape(displayTable, chosen);
     });//vertmenu ends
