@@ -176,7 +176,7 @@ function initApplication() {
                     tempShapes.push(animals[i]);
                 }
                 else if (lvl > 3) {
-                    if (typeof animals[i].fly === "undefined") {
+                    if (typeof animals[i].Fly === "undefined") {
                         tempShapes.push(animals[i]);
                     }
                     else {
@@ -184,7 +184,7 @@ function initApplication() {
                     }
                 }
                 else {
-                    if (typeof animals[i].fly === "undefined" && typeof animals[i].swim === "undefined") {
+                    if (typeof animals[i].Fly === "undefined" && typeof animals[i].Swim === "undefined") {
                         tempShapes.push(animals[i]);
                     }
                     else {
@@ -203,7 +203,7 @@ function initApplication() {
         //populate vert menu with relevanet entries
         for (let i = 0; i < wildShapes.length; i++) {
             const animal = document.createElement("a");
-            const animalInfo = document.createTextNode(wildShapes[i].name + " CR:" + convertCR(wildShapes[i].CR));
+            const animalInfo = document.createTextNode(wildShapes[i].Name + " CR:" + convertCR(wildShapes[i].CR));
             animal.appendChild(animalInfo);
             vertMenu.appendChild(animal);
         }
@@ -222,7 +222,7 @@ function initApplication() {
         var aniPick = pick.split(" CR");
         var chosen;
         for (let i = 0; i < animals.length; i++) {
-            if (animals[i].name == aniPick[0]) {
+            if (animals[i].Name == aniPick[0]) {
                 chosen = animals[i];
             }
         }
