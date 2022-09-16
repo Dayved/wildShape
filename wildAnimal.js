@@ -1,4 +1,4 @@
-const animals = [
+const beasts = `[
     {
         "Name": "Baboon",
         "Size": "Small",
@@ -954,4 +954,4 @@ const animals = [
             "Claw": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "slashing" }
         }
     }
-];
+]`;

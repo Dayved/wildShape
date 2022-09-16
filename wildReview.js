@@ -113,7 +113,7 @@ function displayWildShape(displayTable, chosen){
     var count = Object.keys(chosen).length;
     for (let key of Object.keys(chosen)){
         console.log(key);
-        var row = displayTable.insertRow(0);
+        var row = displayTable.insertRow(-1);
         var cell = row.insertCell(0);
         cell.innerHTML = key;
     }
@@ -122,6 +122,9 @@ function displayWildShape(displayTable, chosen){
 function initApplication() {
     var vertMenu = document.getElementById("vertical-menu");
     var displayTable = document.getElementById("display");
+    //this command makes sure the order of the variable is kept-
+    //js tries to sort it alphabetically and I dont want that
+    var animals = JSON.parse(beasts);
 
     document.getElementById("submit").addEventListener("click", function () {
         var tempIntel = parseInt(getEl("int"));
@@ -226,7 +229,7 @@ function initApplication() {
                 chosen = animals[i];
             }
         }
-        //console.log(chosen);
+        console.log(chosen);
 
         displayWildShape(displayTable, chosen);
     });//vertmenu ends
