@@ -16,7 +16,7 @@ const animals = [
         "Features": {
             "Pack Tactics": "The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
         }
     },
@@ -39,7 +39,7 @@ const animals = [
         "Features": {
             "Keen Smell": "The badger has advantage on Wisdom (Perception) checks that rely on smell."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -63,7 +63,7 @@ const animals = [
             "Echolocation.": "The bat can't use its blindsight while deafened.",
             "Keen Hearing": "The bat has advantage on Wisdom (Perception) checks that rely on hearing."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -89,7 +89,7 @@ const animals = [
         "Features": {
             "Keen Smell": "The cat has advantage on Wisdom (Perception) checks that rely on smell."
         },
-        "actions": {
+        "Actions": {
             "Claws": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
@@ -115,7 +115,7 @@ const animals = [
         "Features": {
             "Amphibious": "The crab can breathe air and water."
         },
-        "actions": {
+        "Actions": {
             "Claw": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
         }
     },
@@ -133,7 +133,7 @@ const animals = [
             "Passive": 12
         },
         "CR": "0",
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
     },
@@ -158,7 +158,7 @@ const animals = [
         "Features": {
             "Keen Sight": " The eagle has advantage on Wisdom (Perception) checks that rely on sight."
         },
-        "actions": {
+        "Actions": {
             "Talons": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing" }
         }
     },
@@ -205,7 +205,7 @@ const animals = [
         "Features": {
             "Illumination": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d6-1", "Type": "slashing" }
         }
     },
@@ -227,7 +227,7 @@ const animals = [
             "Charge": "If the goat moves at least 20 feet straight toward a target and then hits it with a Ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone.",
             "Sure-Footed": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
         },
-        "actions": {
+        "Actions": {
             "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d4+1", "Type": "bludgeoning" }
         }
     },
@@ -252,7 +252,7 @@ const animals = [
         "Features": {
             "Keen Sight": "The hawk has advantage on Wisdom (Perception) checks that rely on sight."
         },
-        "actions": {
+        "Actions": {
             "Talons": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
@@ -276,7 +276,7 @@ const animals = [
         "Features": {
             "Pack Tactics": "The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d6", "Type": "piercing" }
         }
     },
@@ -301,7 +301,7 @@ const animals = [
             "Keen Hearing and Smell": "The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
             "Pack Tactics": "The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
         }
     },
@@ -321,7 +321,7 @@ const animals = [
             "Passive": 9
         },
         "CR": "0",
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -350,7 +350,7 @@ const animals = [
             "Underwater Camouflage": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
             "Water Breathing": "The octopus can breathe only underwater."
         },
-        "actions": {
+        "Actions": {
             "Tentacles": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target." },
             "Ink Cloud": { "recharge": "Short or Long rest", "effect": " A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action." }
         }
@@ -379,7 +379,7 @@ const animals = [
             "Flyby": "The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
             "Keen Hearing and Sight": "The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight."
         },
-        "actions": {
+        "Actions": {
             "Talons": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
@@ -403,7 +403,7 @@ const animals = [
             "Blood Frenzy": "The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
             "Water Breathing": "The quipper can breathe only underwater."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -425,7 +425,7 @@ const animals = [
         "Features": {
             "Keen Smell": "The rat has advantage on Wisdom (Perception) checks that rely on smell."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -450,7 +450,7 @@ const animals = [
         "Features": {
             "Mimicry": "The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
         },
-        "actions": {
+        "Actions": {
             "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -469,7 +469,7 @@ const animals = [
             "Passive": 9
         },
         "CR": "0",
-        "actions": {
+        "Actions": {
             "Sting": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "On hit the target must make a DC 9 Constitution saving throw, taking 4 (1d8) poison damage on a failed save, or half as much damage on a successful one" }
         }
     },
@@ -516,7 +516,7 @@ const animals = [
             "Web Sense": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
             "Web Walker": "The spider ignores movement restrictions caused by webbing."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "Plus 7 (3d4) poison damage." }
         }
     },
@@ -542,7 +542,7 @@ const animals = [
             "Keen Sight and Smell": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.",
             "Pack Tactics": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Beak": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
     },
@@ -567,7 +567,7 @@ const animals = [
         "Features": {
             "Keen Hearing and Smell": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
@@ -593,7 +593,7 @@ const animals = [
             "Keen Sight": "The hawk has advantage on Wisdom (Perception) checks that rely on sight.",
             "Pack Tactics": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
         }
     },
@@ -611,7 +611,7 @@ const animals = [
             "Passive": 9
         },
         "CR": ".125",
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d4", "Type": "bludgeoning" }
         }
     },
@@ -635,7 +635,7 @@ const animals = [
         "Features": {
             "Flyby": "The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
         }
     },
@@ -661,7 +661,7 @@ const animals = [
         "Features": {
             "Amphibious": "The crab can breathe air and water."
         },
-        "actions": {
+        "Actions": {
             "Claw": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 11). The crab has two Claws, each of which can grapple only one target." }
         }
     },
@@ -684,7 +684,7 @@ const animals = [
             "Keen Smell": "The rat has advantage on Wisdom (Perception) checks that rely on smell.",
             "Pack Tactics": "The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
         }
     },
@@ -710,7 +710,7 @@ const animals = [
         "Features": {
             "Keen Hearing and Smell": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d4+3", "Type": "piercing" }
         }
     },
@@ -734,7 +734,7 @@ const animals = [
         "Features": {
             "Keen Hearing and Smell": "The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone." }
         }
     },
@@ -756,7 +756,7 @@ const animals = [
             "Beast of Burden": "The mule is considered to be a Large animal for the purpose of determining its carrying capacity.",
             "Sure-Footed": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone"
         },
-        "actions": {
+        "Actions": {
             "Hooves": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4+2", "Type": "bludgeoning" }
         }
     },
@@ -776,7 +776,7 @@ const animals = [
             "Passive": 10
         },
         "CR": ".125",
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "The target must make a DC 10 Constitution saving throw, taking 5 (2d4) poison damage on a failed save, or half as much damage on a successful one." }
         }
     },
@@ -794,7 +794,7 @@ const animals = [
             "Passive": 10
         },
         "CR": ".125",
-        "actions": {
+        "Actions": {
             "Hooves": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
         }
     },
@@ -812,7 +812,7 @@ const animals = [
             "Passive": 10
         },
         "CR": ".25",
-        "actions": {
+        "Actions": {
             "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "slashing" }
         }
     },
@@ -834,7 +834,7 @@ const animals = [
             "Charge": "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
             "Relentless (Recharges after a Short or Long Rest)": "If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
         },
-        "actions": {
+        "Actions": {
             "Tusk": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "slashing" }
         }
     },
@@ -854,7 +854,7 @@ const animals = [
             "Passive": 10
         },
         "CR": ".25",
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
             "Constrict": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target." }
         }
@@ -873,7 +873,7 @@ const animals = [
             "Passive": 10
         },
         "CR": ".25",
-        "actions": {
+        "Actions": {
             "Hooves": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
         }
     },
@@ -894,7 +894,7 @@ const animals = [
         "Features": {
             "Charge": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."
         },
-        "actions": {
+        "Actions": {
             "Ram": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
             "Hooves": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
         }
@@ -920,7 +920,7 @@ const animals = [
         "Features": {
             "Keen Smell": "The bear has advantage on Wisdom (Perception) checks that rely on smell."
         },
-        "actions": {
+        "Actions": {
             "Multiattack": "The bear makes two attacks: one with its Bite and one with its Claws.",
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
             "Claws": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "slashing" }
@@ -949,7 +949,7 @@ const animals = [
             "Keen Smell": "The tiger has advantage on Wisdom (Perception) checks that rely on smell.",
             "Pounce": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a Claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one Bite attack against it as a bonus action."
         },
-        "actions": {
+        "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d10+3", "Type": "piercing" },
             "Claw": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "slashing" }
         }
