@@ -27,7 +27,7 @@ const animals = [
         "AC": 10,
         "HP": 3,
         "Speed": 20,
-        "burrow": 5,
+        "Burrow": 5,
         "STR": 4,
         "DEX": 11,
         "CON": 12,
