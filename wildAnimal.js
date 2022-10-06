@@ -901,6 +901,104 @@ const beasts = `[
     },
 
     {
+        "Name": "Giant Badge",
+        "Size": "Medium",
+        "AC": 10,
+        "HP": 13,
+        "Speed": 30,
+        "Burrow": 10,
+        "STR": 13,
+        "DEX": 10,
+        "CON": 15,
+        "Senses": {
+            "Darkvision": 30,
+            "Passive": 11
+        },
+        "CR": ".25",
+        "Features": {
+            "Keen Smell": "The badger has advantage on Wisdom (Perception) checks that rely on smell."
+        },
+        "Actions": {
+            "Multiattack": "The badger makes two attacks: one with its bite and one with its claws.",
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing" },
+            "Claws": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "2d4+1", "Type": "slashing" }
+        }
+    },
+
+    {
+        "Name": "Giant Bat",
+        "Size": "Large",
+        "AC": 13,
+        "HP": 22,
+        "Speed": 10,
+        "Fly": 60,
+        "STR": 15,
+        "DEX": 16,
+        "CON": 11,
+        "Senses": {
+            "Blindsight": 60,
+            "Passive": 11
+        },
+        "CR": ".25",
+        "Features": {
+            "Echolocation": "The bat can't use its blindsight while deafened.",
+            "Keen Hearing": "The bat has advantage on Wisdom (Perception) checks that rely on hearing."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" }
+        }
+    },
+
+    {
+        "Name": "Giant Centipede",
+        "Size": "Small",
+        "AC": 13,
+        "HP": 4,
+        "Speed": 30,
+        "Climb": 30,
+        "STR": 5,
+        "DEX": 14,
+        "CON": 12,
+        "Senses": {
+            "Blindsight": 30,
+            "Passive": 8
+        },
+        "CR": ".25",
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing", "Special":"Target must succeed on a DC 11 Constitution saving throw or take 10 (3d6) poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way." }
+        }
+    },
+
+    {
+        "Name": "Giant Frog",
+        "Size": "Medium",
+        "AC": 11,
+        "HP": 18,
+        "Speed": 30,
+        "Swim": 30,
+        "STR": 12,
+        "DEX": 13,
+        "CON": 11,
+        "Skills": {
+            "Perception": 2,
+            "Stealth": 3
+        },
+        "Senses": {
+            "Darkvision": 30,
+            "Passive": 12
+        },
+        "CR": ".25",
+        "Features": {
+            "Amphibious": "The frog can breathe air and water.",
+            "Standing Leap": "The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start."
+        }
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d+1", "Type": "piercing", "Special":"Target is grappled (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target." },
+            "Swallow": "The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time. If the frog dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone."
+        }
+    },
+
+    {
         "Name": "Black Bear",
         "Size": "Medium",
         "AC": 11,
