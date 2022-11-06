@@ -991,10 +991,139 @@ const beasts = `[
         "Features": {
             "Amphibious": "The frog can breathe air and water.",
             "Standing Leap": "The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start."
-        }
+        },
         "Actions": {
-            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d+1", "Type": "piercing", "Special":"Target is grappled (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target." },
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special":"Target is grappled (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target." },
             "Swallow": "The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time. If the frog dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone."
+        }
+    },
+
+    {
+        "Name": "Giant Lizard",
+        "Size": "Large",
+        "AC": 12,
+        "HP": 19,
+        "Speed": 30,
+        "Climb": 30,
+        "STR": 15,
+        "DEX": 12,
+        "CON": 13,
+        "Senses": {
+            "Darkvision": 30,
+            "Passive": 10
+        },
+        "CR": ".25",
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
+        }
+    },
+
+    {
+        "Name": "Giant Owl",
+        "Size": "Large",
+        "AC": 12,
+        "HP": 19,
+        "Speed": 5,
+        "Fly": 60,
+        "STR": 13,
+        "DEX": 15,
+        "CON": 12,
+        "Skills": {
+            "Perception": 5,
+            "Stealth": 4
+        },
+        "Senses": {
+            "Darkvision": 120,
+            "Passive": 15
+        },
+        "CR": ".25",
+        "Features": {
+            "Flyby": "The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.",
+            "Keen Hearing and Sight": "The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight."
+        },
+        "Actions": {
+            "Talons": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "2d6+1", "Type": "slashing"}
+        }
+    },
+
+    {
+        "Name": "Giant Poisonous Snake",
+        "Size": "Medium",
+        "AC": 14,
+        "HP": 11,
+        "Speed": 30,
+        "Swim": 30,
+        "STR": 10,
+        "DEX": 18,
+        "CON": 13,
+        "Skills": {
+            "Perception": 2
+        },
+        "Senses": {
+            "Blindsight": 10,
+            "Passive": 12
+        },
+        "CR": ".25",
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 10, "Damage": "1d4+4", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."}
+        }
+    },
+
+    {
+        "Name": "Giant Wolf Spider",
+        "Size": "Medium",
+        "AC": 13,
+        "HP": 11,
+        "Speed": 40,
+        "Climb": 40,
+        "STR": 12,
+        "DEX": 16,
+        "CON": 13,
+        "Skills": {
+            "Perception": 3,
+            "Stealth": 7
+        },
+        "Senses": {
+            "Blindsight": 10,
+            "Darkvision": 60,
+            "Passive": 13
+        },
+        "CR": ".25",
+        "Features": {
+            "Spider Climb": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+            "Web Sense": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
+            "Web Walker": "The spider ignores movement restrictions caused by webbing."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
+        }
+    },
+
+    {
+        "Name": "Panther",
+        "Size": "Medium",
+        "AC": 12,
+        "HP": 13,
+        "Speed": 50,
+        "Climb": 40,
+        "STR": 14,
+        "DEX": 15,
+        "CON": 10,
+        "Skills": {
+            "Perception": 4,
+            "Stealth": 6
+        },
+        "Senses": {
+            "Passive": 14
+        },
+        "CR": ".25",
+        "Features": {
+            "Keen Smell": "The panther has advantage on Wisdom (Perception) checks that rely on smell.",
+            "Pounce": "If the panther moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the panther can make one bite attack against it as a bonus action."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing"},
+            "Claw": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing"}
         }
     },
 
