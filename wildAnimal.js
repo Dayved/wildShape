@@ -164,6 +164,33 @@ const beasts = `[
     },
 
     {
+        "Name": "Fox",
+        "Size": "Tiny",
+        "AC": 13,
+        "HP": 2,
+        "Speed": 30,
+        "Burrow": 5,
+        "STR": 2,
+        "DEX": 16,
+        "CON": 11,
+        "Skills": {
+            "Perception": 3,
+            "Stealth": 5
+        },
+        "Senses": {
+            "Darkvision": 60,
+            "Passive": 13
+        },
+        "CR": "0",
+        "Features": {
+            "Keen hearing": "The fox has advantage on Wisdom (Perception) checks that rely on hearing",
+        }
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
+        }
+    },
+
+    {
         "Name": "Frog",
         "Size": "Tiny",
         "AC": 11,
@@ -1096,6 +1123,28 @@ const beasts = `[
         },
         "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
+        }
+    },
+
+    {
+        "Name": "Ox",
+        "Size": "Large",
+        "AC": 10,
+        "HP": 15,
+        "Speed": 30,
+        "STR": 18,
+        "DEX": 10,
+        "CON": 14,
+        "Senses": {
+            "Passive": 10
+        },
+        "CR": ".25",
+        "Features": {
+            "Beast of Burden": "The oxen is considered to be a Huge animal for the purpose of determining its carrying capacity.",
+            "Charge": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage.",
+        },
+        "Actions": {
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing"}
         }
     },
 
