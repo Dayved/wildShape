@@ -1141,7 +1141,7 @@ const beasts = `[
         "CR": ".25",
         "Features": {
             "Beast of Burden": "The oxen is considered to be a Huge animal for the purpose of determining its carrying capacity.",
-            "Charge": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage.",
+            "Charge": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
         },
         "Actions": {
             "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing"}
@@ -1173,6 +1173,46 @@ const beasts = `[
         "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing"},
             "Claw": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing"}
+        }
+    },
+
+    {
+        "Name": "Riding Horse",
+        "Size": "Large",
+        "AC": 10,
+        "HP": 13,
+        "Speed": 60,
+        "STR": 16,
+        "DEX": 10,
+        "CON": 12,
+        "Senses": {
+            "Passive": 10
+        },
+        "CR": ".25",
+        "Actions": {
+            "Hooves": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
+        }
+    },
+
+    {
+        "Name": "Rothé",
+        "Size": "Large",
+        "AC": 10,
+        "HP": 15,
+        "Speed": 30,
+        "STR": 18,
+        "DEX": 10,
+        "CON": 14,
+        "Senses": {
+            "Darkvision": 30,
+            "Passive": 10
+        },
+        "CR": ".25",
+        "Features": {
+            "Charge": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+        },
+        "Actions": {
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
         }
     },
 
