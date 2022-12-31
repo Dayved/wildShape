@@ -183,8 +183,8 @@ const beasts = `[
         },
         "CR": "0",
         "Features": {
-            "Keen hearing": "The fox has advantage on Wisdom (Perception) checks that rely on hearing",
-        }
+            "Keen hearing": "The fox has advantage on Wisdom (Perception) checks that rely on hearing"
+        },
         "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
