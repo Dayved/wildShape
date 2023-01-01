@@ -412,7 +412,7 @@ const beasts = `[
     },
 
     {
-        "Name": "Quiper",
+        "Name": "Quipper",
         "Size": "Tiny",
         "AC": 13,
         "HP": 1,
@@ -640,6 +640,33 @@ const beasts = `[
         "CR": ".125",
         "Actions": {
             "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d4", "Type": "bludgeoning" }
+        }
+    },
+
+    {
+        "Name": "Dolphin",
+        "Size": "Medium",
+        "AC": 12,
+        "HP": 11,
+        "Speed": 0,
+        "Swim": 60,
+        "STR": 14,
+        "DEX": 13,
+        "CON": 13,
+        "Skills": {
+            "Perception": 3
+        },
+        "Senses": {
+            "Blindsight": 60,
+            "Passive": 13
+        },
+        "CR": ".125",
+        "Features": {
+            "Charge": "If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 3 (1d6) bludgeoning damage.",
+            "Hold Breath": "The dolphin can hold its breath for 20 minutes."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "bludgeoning" }
         }
     },
 
@@ -928,7 +955,7 @@ const beasts = `[
     },
 
     {
-        "Name": "Giant Badge",
+        "Name": "Giant Badger",
         "Size": "Medium",
         "AC": 10,
         "HP": 13,
@@ -1195,7 +1222,7 @@ const beasts = `[
     },
 
     {
-        "Name": "Rothé",
+        "Name": "Rothe",
         "Size": "Large",
         "AC": 10,
         "HP": 15,
@@ -1210,6 +1237,30 @@ const beasts = `[
         "CR": ".25",
         "Features": {
             "Charge": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+        },
+        "Actions": {
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
+        }
+    },
+
+    {
+        "Name": "Stench Kow",
+        "Size": "Large",
+        "AC": 10,
+        "HP": 15,
+        "Speed": 30,
+        "STR": 18,
+        "DEX": 10,
+        "CON": 14,
+        "Senses": {
+            "Darkvision": 60,
+            "Passive": 10
+        },
+        "Damage Resistances": "Cold, Fire, Poison",
+        "CR": ".25",
+        "Features": {
+            "Charge": "If the stench kow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage.",
+            "Stench": "Any creature other than a stench kow that starts its turn within 5 feet of the stench kow must succeed on a DC 12 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all stench kows for 1 hour."
         },
         "Actions": {
             "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
