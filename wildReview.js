@@ -108,6 +108,7 @@ function convertCR(CR) {
     }
 }
 
+//function to calculate ability modifiers
 function findMod(stat){
     return parseInt((stat - 10) / 2)
 }

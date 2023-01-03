@@ -1268,6 +1268,57 @@ const beasts = `[
     },
 
     {
+        "Name": "Wolf",
+        "Size": "Medium",
+        "AC": 13,
+        "HP": 11,
+        "Speed": 40,
+        "STR": 12,
+        "DEX": 15,
+        "CON": 12,
+        "Skills": {
+            "Perception": 3,
+            "Stealth": 4
+        },
+        "Senses": {
+            "Passive": 13
+        },
+        "CR": ".25",
+        "Features": {
+            "Keen Hearing and Smell": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+            "Pack Tactics": "The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."}
+        }
+    },
+
+    {
+        "Name": "Ape",
+        "Size": "Medium",
+        "AC": 12,
+        "HP": 19,
+        "Speed": 30,
+        "Climb": 30,
+        "STR": 16,
+        "DEX": 14,
+        "CON": 14,
+        "Skills": {
+            "Athletics": 5,
+            "Perception": 3
+        },
+        "Senses": {
+            "Passive": 13
+        },
+        "CR": ".5",
+        "Actions": {
+            "Multiattack": "The ape makes two fist attacks.",
+            "Fist": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
+            "Rock": { "Attack": "Ranged", "ToHit": 5, "Range": "25/50", "Damage": "1d6+3", "Type": "bludgeoning" }
+        }
+    },
+
+    {
         "Name": "Black Bear",
         "Size": "Medium",
         "AC": 11,
@@ -1291,6 +1342,269 @@ const beasts = `[
             "Multiattack": "The bear makes two attacks: one with its Bite and one with its Claws.",
             "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
             "Claws": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "slashing" }
+        }
+    },
+
+    {
+        "Name": "Crocodile",
+        "Size": "Large",
+        "AC": 12,
+        "HP": 19,
+        "Speed": 20,
+        "Swim": 30,
+        "STR": 15,
+        "DEX": 10,
+        "CON": 13,
+        "Skills": {
+            "Stealth": 2
+        },
+        "Senses": {
+            "Passive": 10
+        },
+        "CR": ".5",
+        "Features": {
+            "Hold Breath": "The crocodile can hold its breath for 15 minutes."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "The target is grappled (escape DC 12). Until this grapple ends, the target is restrained, and the crocodile can't bite another target." }
+        }
+    },
+
+    {
+        "Name": "Giant Goat",
+        "Size": "Large",
+        "AC": 11,
+        "HP": 19,
+        "Speed": 40,
+        "STR": 17,
+        "DEX": 11,
+        "CON": 12,
+        "Senses": {
+            "Passive": 11
+        },
+        "CR": ".5",
+        "Features": {
+            "Charge": "If the goat moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.",
+            "Sure-Footed": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
+        },
+        "Actions": {
+            "Ram": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning"}
+        }
+    },
+
+    {
+        "Name": "Giant Sea Horse",
+        "Size": "Large",
+        "AC": 13,
+        "HP": 16,
+        "Speed": 0,
+        "Swim": 40,
+        "STR": 12,
+        "DEX": 15,
+        "CON": 11,
+        "Senses": {
+            "Passive": 11
+        },
+        "CR": ".5",
+        "Features": {
+            "Charge": "If the sea horse moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+            "Water Breathing": "The sea horse can breathe only underwater."
+        },
+        "Actions": {
+            "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
+        }
+    },
+
+    {
+        "Name": "Giant Wasp",
+        "Size": "Medium",
+        "AC": 12,
+        "HP": 13,
+        "Speed": 10,
+        "Fly": 50,
+        "STR": 10,
+        "DEX": 14,
+        "CON": 10,
+        "Senses": {
+            "Passive": 10
+        },
+        "CR": ".5",
+        "Actions": {
+            "Sting": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing", "Special": "The target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
+        }
+    },
+
+    {
+        "Name": "Reef Manta Ray",
+        "Size": "Large",
+        "AC": 12,
+        "HP": 16,
+        "Speed": 0,
+        "Swim": 40,
+        "STR": 13,
+        "DEX": 12,
+        "CON": 12,
+        "Senses": {
+            "Darkvision": 60,
+            "Passive": 11
+        },
+        "CR": ".5",
+        "Features": {
+            "Charge": "If the manta ray moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.",
+            "Water Breathing": "The manta ray can breathe only underwater."
+        },
+        "Actions": {
+            "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
+        }
+    },
+
+    {
+        "Name": "Reef Shark",
+        "Size": "Medium",
+        "AC": 12,
+        "HP": 22,
+        "Speed": 0,
+        "Swim": 40,
+        "STR": 13,
+        "DEX": 12,
+        "CON": 12,
+        "Skills": {
+            "Perception": 2
+        },
+        "Senses": {
+            "Blindsight": 30,
+            "Passive": 12
+        },
+        "CR": ".5",
+        "Features": {
+            "Pack Tactics": "The shark has advantage on an attack roll against a creature if at least one of the shark's allies is within 5 feet of the creature and the ally isn't incapacitated.",
+            "Water Breathing": "The shark can breathe only underwater."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
+        }
+    },
+
+    {
+        "Name": "Warhorse",
+        "Size": "Large",
+        "AC": 11,
+        "HP": 19,
+        "Speed": 60,
+        "STR": 18,
+        "DEX": 12,
+        "CON": 13,
+        "Senses": {
+            "Passive": 11
+        },
+        "CR": ".5",
+        "Features": {
+            "Trampling Charge": "If the horse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action."
+        },
+        "Actions": {
+            "Hooves": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "bludgeoning"}
+        }
+    },
+
+    {
+        "Name": "Brown Bear",
+        "Size": "Large",
+        "AC": 11,
+        "HP": 34,
+        "Speed": 40,
+        "Climb": 30,
+        "STR": 19,
+        "DEX": 10,
+        "CON": 16,
+        "Skills": {
+            "Perception": 3
+        },
+        "Senses": {
+            "Passive": 13
+        },
+        "CR": "1",
+        "Features": {
+            "Keen Smell": "The bear has advantage on Wisdom (Perception) checks that rely on smell."
+        },
+        "Actions": {
+            "Multiattack": "The bear makes two attacks: one with its bite and one with its claws.",
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d8+4", "Type": "piercing"},
+            "Claws": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "slashing"}
+        }
+    },
+
+    {
+        "Name": "Dire Wolf",
+        "Size": "Large",
+        "AC": 14,
+        "HP": 37,
+        "Speed": 50,
+        "STR": 17,
+        "DEX": 15,
+        "CON": 15,
+        "Skills": {
+            "Perception": 3,
+            "Stealth": 4
+        },
+        "Senses": {
+            "Passive": 13
+        },
+        "CR": "1",
+        "Features": {
+            "Keen Hearing and Smell": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+            "Pack Tactics": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated."
+        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."}
+        }
+    },
+
+    {
+        "Name": "Giant Eagle",
+        "Size": "Large",
+        "AC": 13,
+        "HP": 26,
+        "Speed": 10,
+        "Fly": 80,
+        "STR": 16,
+        "DEX": 17,
+        "CON": 13,
+        "Skills": {
+            "Perception": 4
+        },
+        "Senses": {
+            "Passive": 14
+        },
+        "CR": "1",
+        "Features": {
+            "Keen Sight": "The eagle has advantage on Wisdom (Perception) checks that rely on sight."        },
+        "Actions": {
+            "Multiattack": "The eagle makes two attacks: one with its beak and one with its talons.",
+            "Beak": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "piercing"},
+            "Talons": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "slashing"}
+        }
+    },
+
+    {
+        "Name": "Giant Hyena",
+        "Size": "Large",
+        "AC": 12,
+        "HP": 45,
+        "Speed": 50,
+        "STR": 16,
+        "DEX": 14,
+        "CON": 14,
+        "Skills": {
+            "Perception": 3
+        },
+        "Senses": {
+            "Passive": 13
+        },
+        "CR": "1",
+        "Features": {
+            "Rampage": "When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack."        },
+        "Actions": {
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing"}
         }
     },
 
