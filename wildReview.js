@@ -143,6 +143,7 @@ function displayWildShape(displayTable, chosen){
                     for (let sub2 of Object.keys(chosen[key][sub])){
                         var row = displayTable.insertRow(-1);
                         var empty = row.insertCell(0);
+                        var empty2 = row.insertCell(0);
                         var cell = row.insertCell(-1);
                         var cell2 = row.insertCell(-1);
                         cell.innerHTML = sub2;
