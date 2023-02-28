@@ -115,7 +115,7 @@ function displayWildShape(displayTable, chosen){
         var cell2 = row.insertCell(-1);
         cell.innerHTML = key;  //name of key
 
-        //if the value is an object
+        //if the value is an object it means we have subcategories, like for features, so expand the table with an empty space
         if (typeof chosen[key] == 'object'){
             for (let sub of Object.keys(chosen[key])){
                 var row = displayTable.insertRow(-1);
@@ -124,6 +124,7 @@ function displayWildShape(displayTable, chosen){
                 var cell2 = row.insertCell(-1);
                 cell.innerHTML = sub;
 
+                // if we found another object this is likely the attacks so make more space to allow a "clean" view
                 if (typeof chosen[key][sub] == 'object'){
                     for (let sub2 of Object.keys(chosen[key][sub])){
                         var row = displayTable.insertRow(-1);
