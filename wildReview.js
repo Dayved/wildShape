@@ -41,7 +41,7 @@ function getSkills(skillList) {
 //check for checked saves
 function getAttributes(atrList) {
     for (var i = 0; i < atrList.length; i++) {
-        atrList.checked[i] = check(atrList.name[i]);
+        atrList[i].checked = check(atrList[i].name);
     }
 }
 
