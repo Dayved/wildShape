@@ -101,7 +101,16 @@ function findMod(stat){
 //take chosen animal and build table with correct stats
 function displayWildShape(displayTable, chosen){
     //var count = Object.keys(chosen).length; //get how many keys a chosen animal has 
-    document.getElementById("animalname").value = chosen.Name; 
+    document.getElementById("animalname").value = chosen.Name;
+
+    document.getElementById("strscore").value = chosen.STR;
+    document.getElementById("strmod").value = findMod(chosen.STR);
+
+    document.getElementById("dexscore").value = chosen.DEX;
+    document.getElementById("dexmod").value = findMod(chosen.DEX);
+
+    document.getElementById("conscore").value = chosen.CON;
+    document.getElementById("conmod").value = findMod(chosen.CON);
 
     
     
