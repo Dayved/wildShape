@@ -101,59 +101,63 @@ function findMod(stat){
 //take chosen animal and build table with correct stats
 function displayWildShape(displayTable, chosen){
     //var count = Object.keys(chosen).length; //get how many keys a chosen animal has 
+    document.getElementById("animalname").value = chosen.Name; 
 
-    //remove display table if one exists to disallow multiple tables
-    while(displayTable.rows.length > 0) {
-        displayTable.deleteRow(0);
-      }
     
-    //for every key in the chosen animal
-    for (let key of Object.keys(chosen)){
-        //console.log(key);
-        var row = displayTable.insertRow(-1);
-        var cell = row.insertCell(0);
-        var cell2 = row.insertCell(-1);
-        cell.innerHTML = key;  //name of key
+    
+    // old display table code
+    // //remove display table if one exists to disallow multiple tables
+    // while(displayTable.rows.length > 0) {
+    //     displayTable.deleteRow(0);
+    //   }
+    
+    // //for every key in the chosen animal
+    // for (let key of Object.keys(chosen)){
+    //     //console.log(key);
+    //     var row = displayTable.insertRow(-1);
+    //     var cell = row.insertCell(0);
+    //     var cell2 = row.insertCell(-1);
+    //     cell.innerHTML = key;  //name of key
 
-        //if the value is an object
-        if (typeof chosen[key] == 'object'){
-            for (let sub of Object.keys(chosen[key])){
-                var row = displayTable.insertRow(-1);
-                var empty = row.insertCell(0);
-                var cell = row.insertCell(-1);
-                var cell2 = row.insertCell(-1);
-                cell.innerHTML = sub;
+    //     //if the value is an object
+    //     if (typeof chosen[key] == 'object'){
+    //         for (let sub of Object.keys(chosen[key])){
+    //             var row = displayTable.insertRow(-1);
+    //             var empty = row.insertCell(0);
+    //             var cell = row.insertCell(-1);
+    //             var cell2 = row.insertCell(-1);
+    //             cell.innerHTML = sub;
 
-                if (typeof chosen[key][sub] == 'object'){
-                    for (let sub2 of Object.keys(chosen[key][sub])){
-                        var row = displayTable.insertRow(-1);
-                        var empty = row.insertCell(0);
-                        var empty2 = row.insertCell(0);
-                        var cell = row.insertCell(-1);
-                        var cell2 = row.insertCell(-1);
-                        cell.innerHTML = sub2;
-                        cell2.innerHTML = chosen[key][sub][sub2];
-                    }
-                }else{
-                    cell2.innerHTML = chosen[key][sub];
-                }
-            }
-        }
-        else {
-            cell2.innerHTML = chosen[key]; //name of value
-        }
+    //             if (typeof chosen[key][sub] == 'object'){
+    //                 for (let sub2 of Object.keys(chosen[key][sub])){
+    //                     var row = displayTable.insertRow(-1);
+    //                     var empty = row.insertCell(0);
+    //                     var empty2 = row.insertCell(0);
+    //                     var cell = row.insertCell(-1);
+    //                     var cell2 = row.insertCell(-1);
+    //                     cell.innerHTML = sub2;
+    //                     cell2.innerHTML = chosen[key][sub][sub2];
+    //                 }
+    //             }else{
+    //                 cell2.innerHTML = chosen[key][sub];
+    //             }
+    //         }
+    //     }
+    //     else {
+    //         cell2.innerHTML = chosen[key]; //name of value
+    //     }
 
-        //find con to input mental stats in after
-        if (key == "CON"){
-            for (let stat of Object.keys(mental)){
-                var row = displayTable.insertRow(-1);
-                var cell = row.insertCell(0);
-                var cell2 = row.insertCell(-1);
-                cell.innerHTML = stat;
-                cell2.innerHTML = mental[stat];
-            }
-        }
-    }
+    //     //find con to input mental stats in after
+    //     if (key == "CON"){
+    //         for (let stat of Object.keys(mental)){
+    //             var row = displayTable.insertRow(-1);
+    //             var cell = row.insertCell(0);
+    //             var cell2 = row.insertCell(-1);
+    //             cell.innerHTML = stat;
+    //             cell2.innerHTML = mental[stat];
+    //         }
+    //     }
+    // }
 }
 
 function initApplication() {
