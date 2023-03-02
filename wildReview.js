@@ -103,16 +103,19 @@ function displayWildShape(displayTable, chosen){
     //var count = Object.keys(chosen).length; //get how many keys a chosen animal has 
     document.getElementById("animalname").value = chosen.Name;
 
-    document.getElementById("strscore").value = chosen.STR;
-    document.getElementById("strmod").value = findMod(chosen.STR);
-
-    document.getElementById("dexscore").value = chosen.DEX;
-    document.getElementById("dexmod").value = findMod(chosen.DEX);
-
-    document.getElementById("conscore").value = chosen.CON;
-    document.getElementById("conmod").value = findMod(chosen.CON);
-
-    
+    // for every attribiute
+    for (var i = 0; i < atrList.length; i++){
+        atr = atrList[i].name.slice(0,3).toLowerCase(); // find the upper and lower case abbreviations
+        atrUpper = atrList[i].name.slice(0,3).toUpperCase();
+        
+        if (i < 3){ // if the attribute is STR, DEX, or CON use animal stats. Else use mental stats from player
+            document.getElementById(atr + "score").value = chosen[atrUpper];
+            document.getElementById(atr + "mod").value = findMod(chosen[atrUpper]);
+        }else{
+            document.getElementById(atr + "score").value = mental[atrUpper];
+            document.getElementById(atr + "mod").value = findMod(mental[atrUpper]);
+        }
+    }
     
     // old display table code
     // //remove display table if one exists to disallow multiple tables

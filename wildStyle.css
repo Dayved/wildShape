@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
 .player,
 th,
 td {
@@ -53,7 +55,7 @@ section{
       flex-direction: column;
 }
 
-.attributes{
+section.attributes{
   width: 70px;
   height: 80%;
   /* attr-gutter: 31px; */
@@ -82,8 +84,8 @@ ul.scores{
   height: 100%;
 }
 li.scores{
-  height: 80px;
-  width: 70px;
+  height: 70px;
+  width: 80px;
   background-color: white;
   border: 1px solid black;
   text-align: center;
