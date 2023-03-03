@@ -9,16 +9,15 @@ var prof = 2;
 var wildShapes = [];
 
 //skills
-var skillList = ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation",
-    "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"];
-var skillChecked = [false, false, false, false, false, false, false, false, false,
-    false, false, false, false, false, false, false, false,];
+var skillList = [{name:"Acrobatics", checked: false}, {name:"Animal Handling", checked: false}, {name:"Arcana",checked: false}, {name:"Athletics",checked: false}, 
+{name:"Deception", checked: false}, {name:"History", checked: false}, {name:"Insight", checked: false}, {name:"Intimidation", checked: false}, {name:"Investigation", checked: false},
+{name:"Medicine", checked: false}, {name:"Nature", checked: false}, {name:"Perception", checked: false}, {name:"Performance", checked: false}, {name:"Persuasion", checked: false},
+{name:"Religion", checked: false}, {name:"Sleight of Hand", checked: false}, {name:"Stealth", checked: false}, {name:"Survival", checked: false}];
+
 
 //attributes
-var atrList = ["Strength", "Dexterity", "Constitution",
-    "Intelligence", "Wisdom", "Charisma"];
-var atrChecked = [false, false, false,
-    false, false, false]
+var atrList = [{name:"Strength", checked: false}, {name:"Dexterity", checked: false}, {name:"Constitution",checked: false},
+{name:"Intelligence", checked: false}, {name:"Wisdom", checked: false}, {name:"Charisma", checked: false}];
 
 $(document).ready(initApplication);
 
@@ -35,34 +34,20 @@ function getEl(thing) {
 //function to check for checked skills
 function getSkills(skillList) {
     for (var i = 0; i < skillList.length; i++) {
-        skillChecked[i] = check(skillList[i]);
+        skillList[i].checked = check(skillList[i].name);
     }
 }
 
 //check for checked saves
 function getAttributes(atrList) {
     for (var i = 0; i < atrList.length; i++) {
-        atrChecked[i] = check(atrList[i]);
+        atrList[i].checked = check(atrList[i].name);
     }
 }
 
 //get proficiency
 function getProf(level) {
-    if (level < 5) {
-        return 2;
-    }
-    else if (level < 9) {
-        return 3;
-    }
-    else if (level < 13) {
-        return 4;
-    }
-    else if (level < 17) {
-        return 5;
-    }
-    else {
-        return 6;
-    }
+    return 1+Math.ceil(level/4);
 }
 
 //formula for druid max CR wild shape Calculation
@@ -130,7 +115,7 @@ function displayWildShape(displayTable, chosen){
         var cell2 = row.insertCell(-1);
         cell.innerHTML = key;  //name of key
 
-        //if the value is an object
+        //if the value is an object it means we have subcategories, like for features, so expand the table with an empty space
         if (typeof chosen[key] == 'object'){
             for (let sub of Object.keys(chosen[key])){
                 var row = displayTable.insertRow(-1);
@@ -139,6 +124,7 @@ function displayWildShape(displayTable, chosen){
                 var cell2 = row.insertCell(-1);
                 cell.innerHTML = sub;
 
+                // if we found another object this is likely the attacks so make more space to allow a "clean" view
                 if (typeof chosen[key][sub] == 'object'){
                     for (let sub2 of Object.keys(chosen[key][sub])){
                         var row = displayTable.insertRow(-1);
