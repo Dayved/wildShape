@@ -105,15 +105,15 @@ function displayWildShape(displayTable, chosen){
 
     // for every attribiute
     for (var i = 0; i < atrList.length; i++){
-        atr = atrList[i].name.slice(0,3).toLowerCase(); // find the upper and lower case abbreviations
-        atrUpper = atrList[i].name.slice(0,3).toUpperCase();
+        atr = atrList[i].name.slice(0,3).toLowerCase(); // find the lower case abbreviations
+        
         
         if (i < 3){ // if the attribute is STR, DEX, or CON use animal stats. Else use mental stats from player
-            document.getElementById(atr + "score").value = chosen[atrUpper];
-            document.getElementById(atr + "mod").value = findMod(chosen[atrUpper]);
+            document.getElementById(atr + "score").value = chosen[atr.toUpperCase()]; // make abbreviation uppercase to find stats
+            document.getElementById(atr + "mod").value = findMod(chosen[atr.toUpperCase()]);
         }else{
-            document.getElementById(atr + "score").value = mental[atrUpper];
-            document.getElementById(atr + "mod").value = findMod(mental[atrUpper]);
+            document.getElementById(atr + "score").value = mental[atr.toUpperCase()];
+            document.getElementById(atr + "mod").value = findMod(mental[atr.toUpperCase()]);
         }
     }
     
