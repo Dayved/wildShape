@@ -258,6 +258,11 @@ function initApplication() {
             vertMenu.appendChild(animal);
         }
 
+        //check to see if a moon circle druid is high enough level for elemantal selection
+        if (lvl >= 10 && moon){
+
+        }
+
     });//submit ends
 
     //highlight the selected element on the vert menu
