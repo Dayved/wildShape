@@ -131,6 +131,7 @@ function displayWildShape(displayTable, chosen){
     //     var cell2 = row.insertCell(-1);
     //     cell.innerHTML = key;  //name of key
 
+
     //     //if the value is an object
     //     if (typeof chosen[key] == 'object'){
     //         for (let sub of Object.keys(chosen[key])){
@@ -157,7 +158,7 @@ function displayWildShape(displayTable, chosen){
     //     }
     //     else {
     //         cell2.innerHTML = chosen[key]; //name of value
-    //     }
+    //     } 
 
     //     //find con to input mental stats in after
     //     if (key == "CON"){
