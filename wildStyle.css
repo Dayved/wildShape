@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
 .player,
 th,
 td {
@@ -25,4 +27,94 @@ td {
 .vertical-menu a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+
+input.animalinput{
+  text-align:center;
+}
+
+.animalname {
+  border: 1px solid black;
+  /* border-right: 0; */
+  /* border-radius: 10px 0 0 10px; */
+  text-align: center;
+  padding: 5px 0;
+  background-color: #eee;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+section{
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+}
+
+section.attributes{
+  width: 70px;
+  height: 80%;
+  /* attr-gutter: 31px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.scores{
+  /* width: 70px + 31px; */
+  background-color: #bbb;
+  border-radius: 10px;
+  padding-bottom: 5px / 2px;
+}
+label.scores{
+  font-size: 8px;
+  font-weight: bold;
+}
+ul.scores{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+li.scores{
+  height: 70px;
+  width: 80px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+input.scores{
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+input.score{
+  text-align: center;
+  font-size: 40px;
+  padding: 2px 0px 0px 0px;
+  background: white;
+}
+
+.modifier{
+  /* margin-top: 3px; */
+  text-align: center;
+}
+input.modifier{
+  background: white;
+  width: 30px;
+  height: 20px;
+  border: 1px inset black;
+  border-radius: 20px;
+  margin: -1px;
 }
