@@ -117,68 +117,16 @@ function displayWildShape(displayTable, chosen){
         }
     }
     
-    // old display table code
-    // //remove display table if one exists to disallow multiple tables
-    // while(displayTable.rows.length > 0) {
-    //     displayTable.deleteRow(0);
-    //   }
-    
-    // //for every key in the chosen animal
-    // for (let key of Object.keys(chosen)){
-    //     //console.log(key);
-    //     var row = displayTable.insertRow(-1);
-    //     var cell = row.insertCell(0);
-    //     var cell2 = row.insertCell(-1);
-    //     cell.innerHTML = key;  //name of key
-
-
-    //     //if the value is an object
-    //     if (typeof chosen[key] == 'object'){
-    //         for (let sub of Object.keys(chosen[key])){
-    //             var row = displayTable.insertRow(-1);
-    //             var empty = row.insertCell(0);
-    //             var cell = row.insertCell(-1);
-    //             var cell2 = row.insertCell(-1);
-    //             cell.innerHTML = sub;
-
-    //             if (typeof chosen[key][sub] == 'object'){
-    //                 for (let sub2 of Object.keys(chosen[key][sub])){
-    //                     var row = displayTable.insertRow(-1);
-    //                     var empty = row.insertCell(0);
-    //                     var empty2 = row.insertCell(0);
-    //                     var cell = row.insertCell(-1);
-    //                     var cell2 = row.insertCell(-1);
-    //                     cell.innerHTML = sub2;
-    //                     cell2.innerHTML = chosen[key][sub][sub2];
-    //                 }
-    //             }else{
-    //                 cell2.innerHTML = chosen[key][sub];
-    //             }
-    //         }
-    //     }
-    //     else {
-    //         cell2.innerHTML = chosen[key]; //name of value
-    //     } 
-
-    //     //find con to input mental stats in after
-    //     if (key == "CON"){
-    //         for (let stat of Object.keys(mental)){
-    //             var row = displayTable.insertRow(-1);
-    //             var cell = row.insertCell(0);
-    //             var cell2 = row.insertCell(-1);
-    //             cell.innerHTML = stat;
-    //             cell2.innerHTML = mental[stat];
-    //         }
-    //     }
-    // }
 }
 
 function initApplication() {
     var vertMenu = document.getElementById("vertical-menu");
     var displayTable = document.getElementById("display");
+    var elementalMenu = document.getElementById("elemental-menu");
     //this command makes sure the order of the variable is kept-
     //js tries to sort it alphabetically and I dont want that
     var animals = JSON.parse(beasts);
+    var elementals = JSON.parse(elements);
 
     document.getElementById("submit").addEventListener("click", function () {
         var tempIntel = parseInt(getEl("int"));

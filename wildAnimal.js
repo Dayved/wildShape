@@ -2167,9 +2167,7 @@ const elements = `[
         "Actions": {
             "Multiattack": "The elemental makes two slam attacks.",
             "Slam": {"Attack": "Melee", "To Hit": 8, "Reach": 5, "Damage": "2d8+5", "Type": "bludgeoning"},
-            "Whirlwind": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone.
-
-            If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone."}
+            "Whirlwind": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone. If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone."}
         }
     },
     
@@ -2256,9 +2254,7 @@ const elements = `[
         "Actions": {
             "Multiattack": "The elemental makes two slam attacks.",
             "Slam": {"Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "2d8+4", "Type": "bludgeoning"},
-            "Whelm": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.
-
-            The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding."}
+            "Whelm": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space. The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding."}
         }
     }
 ]`;
