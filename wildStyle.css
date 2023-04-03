@@ -14,7 +14,7 @@ td {
 .vertical-menu a {
   background-color: #eee;
   color: black;
-  display: block;
+  display: flex;
   padding: 12px;
   text-decoration: none;
 }
@@ -46,7 +46,7 @@ td {
 .elemental-menu a {
   background-color: #eee;
   color: black;
-  display: block;
+  display: flex;
   padding: 12px;
   text-decoration: none;
 }
@@ -150,19 +150,36 @@ input.modifier{
   margin: -1px;
 }
 
+/* Proficiency bonus */
 .proficiencybonus{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  float: right;
+  padding-right: 68%;
+  /* flex-direction: row-reverse;
+  justify-content: flex-end; */
 }
 input.proficiencybonus{
   width: 30px;
   height: 30px - 2;
   border: 1px solid black;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
 }
-.label-container{
+
+.armorClass{
+  float: right;
+  padding-right: 300px;
+  /* flex-direction: row-reverse;
+  justify-content: flex-end; */
+}
+input.armorClass{
+  width: 30px;
+  height: 30px - 2;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* .label-container{
   position: relative;
   width: 100%;
   height: 30px - 10px - 2px;
@@ -179,4 +196,4 @@ label.label-container{
   transform: translate(0%, 50%);
   width: 100%;
   font-size: 8px;
-}
+} */

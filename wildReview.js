@@ -100,10 +100,12 @@ function findMod(stat){
 
 //take chosen animal and build table with correct stats
 function displayWildShape(chosen){
-    //var count = Object.keys(chosen).length; //get how many keys a chosen animal has 
+    // set name of animal on the character sheet
     document.getElementById("animalname").value = chosen.Name;
+    document.getElementById("proficiencybonus").value = "+ " + prof;
+    document.getElementById("armorClass").value = chosen.AC;
 
-    // for every attribiute
+    // for every attribiute set the scores of animal and player stats
     for (var i = 0; i < atrList.length; i++){
         atr = atrList[i].name.slice(0,3).toLowerCase(); // find the lower case abbreviations
         
@@ -116,6 +118,8 @@ function displayWildShape(chosen){
             document.getElementById(atr + "mod").value = findMod(mental[atr.toUpperCase()]);
         }
     }
+
+
     
 }
 
