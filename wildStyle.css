@@ -31,7 +31,7 @@ td {
 
 /* style for Elemental menu -- needs work*/
 .elemental-menu {
-  float: right;
+  /* float: right; */
   width: 200px;
   height: 150px;
   overflow-y: auto;

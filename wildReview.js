@@ -99,7 +99,7 @@ function findMod(stat){
 }
 
 //take chosen animal and build table with correct stats
-function displayWildShape(displayTable, chosen){
+function displayWildShape(chosen){
     //var count = Object.keys(chosen).length; //get how many keys a chosen animal has 
     document.getElementById("animalname").value = chosen.Name;
 
@@ -121,6 +121,7 @@ function displayWildShape(displayTable, chosen){
 
 function initApplication() {
     var vertMenu = document.getElementById("vertical-menu");
+    var elemMenu = document.getElementById("elemental-menu");
     var displayTable = document.getElementById("display");
     var elementalMenu = document.getElementById("elemental-menu");
     //this command makes sure the order of the variable is kept-
@@ -197,8 +198,9 @@ function initApplication() {
         wildShapes = tempShapes;
 
         //clear vert menu of previous entires
-        while (vertMenu.hasChildNodes()) {
+        while (vertMenu.hasChildNodes() && elemMenu.hasChildNodes()) {
             vertMenu.removeChild(vertMenu.firstChild);
+            elemMenu.removeChild(elemMenu.firstChild);
         }
         //populate vert menu with relevanet entries
         for (let i = 0; i < wildShapes.length; i++) {
@@ -210,7 +212,18 @@ function initApplication() {
 
         //check to see if a moon circle druid is high enough level for elemantal selection
         if (lvl >= 10 && moon){
-
+            //populate vert menu with relevanet entries
+            for (let i = 0; i < 4; i++) {
+                const elem = document.createElement("a");
+                const elemInfo = document.createTextNode(elementals[i].Name + " CR:" + convertCR(elementals[i].CR));
+                elem.appendChild(elemInfo);
+                elemMenu.appendChild(elem);
+            }
+        } else {
+            const empty = document.createElement("a");
+            const txt = document.createTextNode("Elementals");
+            empty.appendChild(txt);
+            elemMenu.appendChild(empty);
         }
 
     });//submit ends
@@ -233,7 +246,26 @@ function initApplication() {
         }
         //console.log(chosen);
 
-        displayWildShape(displayTable, chosen);
+        displayWildShape(chosen);
     });//vertmenu ends
 
+    //highlight the selected element on the elements menu
+    elemMenu.addEventListener("click", function (event) {
+        for (let i = 0; i < elemMenu.children.length; i++) {
+            elemMenu.children[i].className = "inactive";
+        }
+        //get selected item
+        var pick = event.target.textContent;
+        //console.log(pick);
+        event.target.classList.toggle("active");
+        var elemPick = pick.split(" CR");
+        var chosen;
+        for (let i = 0; i < elementals.length; i++) {
+            if (elementals[i].Name == elemPick[0]) {
+                chosen = elementals[i];
+            }
+        }
+
+        displayWildShape(chosen);
+    });//vertmenu ends
 }
