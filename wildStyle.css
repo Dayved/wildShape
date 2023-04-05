@@ -152,8 +152,9 @@ input.modifier{
 
 /* Proficiency bonus */
 .proficiencybonus{
-  float: right;
-  padding-right: 68%;
+  float: left;
+  width: 33.33%;
+  padding: 50px;
   /* flex-direction: row-reverse;
   justify-content: flex-end; */
 }
@@ -165,9 +166,17 @@ input.proficiencybonus{
   border-radius: 20px;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Armor class */
 .armorClass{
-  float: right;
-  padding-right: 300px;
+  float: left;
+  width: 33.33%;
+  padding: 50px;
   /* flex-direction: row-reverse;
   justify-content: flex-end; */
 }
