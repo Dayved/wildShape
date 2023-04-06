@@ -1,0 +1,61 @@
+.player,
+th,
+td {
+  border: 1px solid black;
+}
+/* styles for the animals menu  */
+.vertical-menu {
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: flex;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+/* end of animal menu */
+
+/* style for Elemental menu -- needs work*/
+.elemental-menu {
+  /* float: right; */
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.elemental-menu::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.elemental-menu a {
+  background-color: #eee;
+  color: black;
+  display: flex;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.elemental-menu a:hover {
+  background-color: #ccc;
+}
+
+.elemental-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+/* end of elemental menu */

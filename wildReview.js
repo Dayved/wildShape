@@ -101,7 +101,7 @@ function findMod(stat){
 //take chosen animal and build table with correct stats
 function displayWildShape(chosen){
     // set name of animal on the character sheet
-    document.getElementById("animalname").value = chosen.Name;
+    document.getElementById("creatureName").value = chosen.Name;
     document.getElementById("proficiencybonus").value = "+ " + prof;
     document.getElementById("armorClass").value = chosen.AC;
 
@@ -201,11 +201,16 @@ function initApplication() {
         //console.log(tempShapes);
         wildShapes = tempShapes;
 
-        //clear vert menu of previous entires
-        while (vertMenu.hasChildNodes() && elemMenu.hasChildNodes()) {
+        //clear vert animal menu of previous entires
+        while (vertMenu.hasChildNodes()) {
             vertMenu.removeChild(vertMenu.firstChild);
+        }
+
+        //clear vert elemental menu of previous entires
+        while (elemMenu.hasChildNodes()) {
             elemMenu.removeChild(elemMenu.firstChild);
         }
+
         //populate vert menu with relevanet entries
         for (let i = 0; i < wildShapes.length; i++) {
             const animal = document.createElement("a");
