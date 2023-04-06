@@ -102,13 +102,13 @@ function findMod(stat){
 function displayWildShape(chosen){
     // set name of animal on the character sheet
     document.getElementById("creatureName").value = chosen.Name;
-    document.getElementById("proficiencybonus").value = "+ " + prof;
-    document.getElementById("armorClass").value = chosen.AC;
-
+    // document.getElementById("proficiencybonus").value = "+ " + prof;
+    // document.getElementById("armorClass").value = chosen.AC;
+    
     // for every attribiute set the scores of animal and player stats
     for (var i = 0; i < atrList.length; i++){
         atr = atrList[i].name.slice(0,3).toLowerCase(); // find the lower case abbreviations
-        
+        console.log(mental[atr.toUpperCase()]);
         
         if (i < 3){ // if the attribute is STR, DEX, or CON use animal stats. Else use mental stats from player
             document.getElementById(atr + "score").value = chosen[atr.toUpperCase()]; // make abbreviation uppercase to find stats
