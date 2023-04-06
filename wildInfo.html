@@ -15,10 +15,10 @@
 <body>
   <p>Intput the Intelligence, Wisdom, Charisma and level of your character</p>
   <p></p>
-  <label for="int">Intelligence:</label><br>
-  <input type="text" id="int" maxlength="2" size="1" value="0"><br>
   <label for="wis">Wisdom:</label><br>
   <input type="text" id="wis" maxlength="2" size="1" value="0"><br>
+  <label for="int">Intelligence:</label><br>
+  <input type="text" id="int" maxlength="2" size="1" value="0"><br>
   <label for="cha">Charisma:</label><br>
   <input type="text" id="cha" maxlength="2" size="1" value="0"><br>
   <label for="lvl">Level:</label><br>
@@ -161,6 +161,9 @@
     <a>Elementals</a>
   </div> 
 
+  <br>
+  <br>
+
   <form class="charsheet">
     <header>
       <section class="charname">
@@ -199,7 +202,7 @@
               </li>
               <li>
                 <div class="score">
-                  <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" id = "wisscore" value = "10"/>
+                  <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" id = "wisscore" />
                 </div>
                 <div class="modifier">
                   <input name="Wisdommod" placeholder="+0" id = "wismod"/>
@@ -207,39 +210,33 @@
               </li>
               <li>
                 <div class="score">
-                  <label for="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" />
+                  <label for="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" id = "intscore" />
                 </div>
                 <div class="modifier">
-                  <input name="Intelligencemod" placeholder="+0" />
+                  <input name="Intelligencemod" placeholder="+0" id = "intmod" />
                 </div>
               </li>
               <li>
                 <div class="score">
-                  <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" />
+                  <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" id = "chascore" />
                 </div>
                 <div class="modifier">
-                  <input name="Charismamod" placeholder="+0" />
+                  <input name="Charismamod" placeholder="+0" id = "chamod" />
                 </div>
               </li>
             </ul>
           </div>
           <div class="attr-applications">
-            <div class="inspiration box">
-              <div class="label-container">
-                <label for="inspiration">Inspiration</label>
-              </div>
-              <input name="inspiration" type="checkbox" />
-            </div>
             <div class="proficiencybonus box">
               <div class="label-container">
                 <label for="proficiencybonus">Proficiency Bonus</label>
               </div>
-              <input name="proficiencybonus" placeholder="+2" />
+              <input name="proficiencybonus" placeholder="+2" id = "proficiencybonus" />
             </div>
             <div class="saves list-section box">
               <ul>
                 <li>
-                  <label for="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" /><input name="Strength-save-prof" type="checkbox" />
+                  <label for="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" id = "strsave"/><input name="Strength-save-prof" type="checkbox" id = "strbox"/>
                 </li>
                 <li>
                   <label for="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" /><input name="Dexterity-save-prof" type="checkbox" />
