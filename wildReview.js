@@ -1,6 +1,6 @@
 //stats level and moon circle
-const mental = {INT : 0,
-                WIS : 0,
+const mental = {WIS : 0,
+                INT : 0,
                 CHA : 0};
 var lvl = 0;
 var moon = false;
@@ -9,10 +9,12 @@ var prof = 2;
 var wildShapes = [];
 
 //skills
-var skillList = [{name:"Acrobatics", checked: false}, {name:"Animal Handling", checked: false}, {name:"Arcana",checked: false}, {name:"Athletics",checked: false}, 
-{name:"Deception", checked: false}, {name:"History", checked: false}, {name:"Insight", checked: false}, {name:"Intimidation", checked: false}, {name:"Investigation", checked: false},
-{name:"Medicine", checked: false}, {name:"Nature", checked: false}, {name:"Perception", checked: false}, {name:"Performance", checked: false}, {name:"Persuasion", checked: false},
-{name:"Religion", checked: false}, {name:"Sleight of Hand", checked: false}, {name:"Stealth", checked: false}, {name:"Survival", checked: false}];
+var skillList = [{name:"Acrobatics", checked: false, assocSkill: "DEX"}, {name:"Animal Handling", checked: false, assocSkill: "WIS"}, {name:"Arcana",checked: false, assocSkill: "INT"}, 
+{name:"Athletics",checked: false, assocSkill: "STR"}, {name:"Deception", checked: false, assocSkill: "CHA"}, {name:"History", checked: false, assocSkill: "INT"}, 
+{name:"Insight", checked: false, assocSkill: "WIS"}, {name:"Intimidation", checked: false, assocSkill: "CHA"}, {name:"Investigation", checked: false, assocSkill: "INT"},
+{name:"Medicine", checked: false, assocSkill: "WIS"}, {name:"Nature", checked: false, assocSkill: "INT"}, {name:"Perception", checked: false, assocSkill: "WIS"}, 
+{name:"Performance", checked: false, assocSkill: "CHA"}, {name:"Persuasion", checked: false, assocSkill: "CHA"},{name:"Religion", checked: false, assocSkill: "INT"},
+{name:"Sleight of Hand", checked: false, assocSkill: "DEX"}, {name:"Stealth", checked: false, assocSkill: "DEX"}, {name:"Survival", checked: false, assocSkill: "WIS"}];
 
 
 //attributes
@@ -113,15 +115,32 @@ function displayWildShape(chosen){
             document.getElementById(atr + "score").value = chosen[atr.toUpperCase()]; // make abbreviation uppercase to find stats
             document.getElementById(atr + "mod").value = findMod(chosen[atr.toUpperCase()]);
 
-            // if that attrubute save is checked add proficiency to total
+            // if that attrubute save is checked add proficiency to total, else just use ability modifier
             if (atrList[i].checked){
                 document.getElementById(atr + "save").value = prof + findMod(chosen[atr.toUpperCase()]);
-                document.getElementById(atr + "box").value = checked;
+                document.getElementById(atr + "box").checked = true;
+            }
+            else {
+                document.getElementById(atr + "save").value = findMod(chosen[atr.toUpperCase()]);
+                document.getElementById(atr + "box").checked = false;
             }
 
         }else{  // Else use mental stats from player
             document.getElementById(atr + "score").value = mental[atr.toUpperCase()];
             document.getElementById(atr + "mod").value = findMod(mental[atr.toUpperCase()]);      
+
+            if (atrList[i].checked){
+                document.getElementById(atr + "save").value = prof + findMod(mental[atr.toUpperCase()]);
+                document.getElementById(atr + "box").checked = true;
+            }
+            else {
+                document.getElementById(atr + "save").value = findMod(mental[atr.toUpperCase()]);
+                document.getElementById(atr + "box").checked = false;
+            }
+        }
+
+        for (var i = 0; i < skillList.length; i++){
+            
         }
     }
 
