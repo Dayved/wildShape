@@ -140,7 +140,7 @@ function displayWildShape(chosen){
         }
 
         for (var i = 0; i < skillList.length; i++){
-            
+            document.getElementById(skillList[i].name).value =
         }
     }
 
