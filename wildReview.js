@@ -100,27 +100,51 @@ function findMod(stat){
     return parseInt((stat - 10) / 2)
 }
 
+function needforspeed(chosen){
+    var quick = document.getElementById("speedClass");
+    document.getElementById("speed").value = chosen.Speed;
+
+    // check for fly speed box and rmeove it if it exists
+    if (document.getElementById("flybox") !== null){
+        var elem = document.getElementById("flybox");
+        elem.parentNode.removeChild(elem);
+    }
+
+    if (typeof chosen.Fly !== "undefined") {
+        var flybox = document.createElement('div');
+        flybox.setAttribute('id', 'flybox');
+        var flylabel = document.createElement('label');
+        flylabel.innerHTML = "Fly";
+        flylabel.setAttribute('for', 'flyspeed');
+        var flyspeed = document.createElement('input');
+        flyspeed.type = 'text';
+        flyspeed.setAttribute('name', 'flyspeed');
+        flyspeed.setAttribute('id', 'flyspeed');
+        flyspeed.value = chosen.Fly;
+        flybox.appendChild(flylabel);
+        flybox.appendChild(flyspeed);
+        quick.appendChild(flybox);
+    }
+    //  swim, burrow, climb
+}
+
 //take chosen animal and build table with correct stats
 function displayWildShape(chosen){
     // set name of animal on the character sheet
-    document.getElementById("creatureName").value = chosen.Name;
-    document.getElementById("proficiencybonus").value = "+ " + prof;
-    document.getElementById("ac").value = chosen.AC;
-    
-    // calculate passive perception; check if proficient and if animal passive is higher
+    document.getElementById("creatureName").value = chosen.Name; 
+    document.getElementById("proficiencybonus").value = "+ " + prof; // proficiency bonus
+    document.getElementById("ac").value = chosen.AC; //ac
+    document.getElementById("initiative").value = "+ " + findMod(chosen.DEX); // initiative
+    needforspeed(chosen);
+
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){
         pass += prof;
     }
-
-    if (chosen.Senses.Passive > pass){
-        pass = chosen.Senses.Passive;
-    }
-    
-    document.getElementById("passiveperception").value = pass;
+    document.getElementById("passiveperception").value = pass; // passive perception
 
 
-    // for every attribiute set the scores of animal and player stats
+    // for every attribiute set the scores of animal and player stats. Calculate stats and saves
     for (var i = 0; i < atrList.length; i++){
         atr = atrList[i].name.slice(0,3).toLowerCase(); // find the lower case abbreviations        
         
@@ -153,7 +177,7 @@ function displayWildShape(chosen){
         }
     }
 
-    // check if the user checked the skills as proficient then assign mod appropriate for mental or physical stat
+    // check if the user checked the skills as proficient then assign mod appropriate for mental or physical stat. Assign skill totals
     for (var i = 0; i < skillList.length; i++){  
         foundSkill = skillList[i].assocSkill;
         if (foundSkill === "WIS" || foundSkill === "INT" || foundSkill ==="CHA"){ // mental

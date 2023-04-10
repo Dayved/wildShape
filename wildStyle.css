@@ -30,7 +30,7 @@ div.box {
 }
 
 form.charsheet {
-  width: 800px;
+  width: 80%;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -191,7 +191,7 @@ form.charsheet main > section section.attributes div.scores ul li input {
 }
 form.charsheet main > section section.attributes div.scores ul li div.score input {
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   padding: 2px 0px 0px 0px;
   background: white;
 }
