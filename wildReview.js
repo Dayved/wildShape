@@ -183,8 +183,6 @@ function displayWildShape(chosen){
 function initApplication() {
     var vertMenu = document.getElementById("vertical-menu");
     var elemMenu = document.getElementById("elemental-menu");
-    var displayTable = document.getElementById("display");
-    var elementalMenu = document.getElementById("elemental-menu");
     //this command makes sure the order of the variable is kept-
     //js tries to sort it alphabetically and I dont want that
     var animals = JSON.parse(beasts);
