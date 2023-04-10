@@ -105,8 +105,21 @@ function displayWildShape(chosen){
     // set name of animal on the character sheet
     document.getElementById("creatureName").value = chosen.Name;
     document.getElementById("proficiencybonus").value = "+ " + prof;
-    // document.getElementById("armorClass").value = chosen.AC;
+    document.getElementById("ac").value = chosen.AC;
     
+    // calculate passive perception; check if proficient and if animal passive is higher
+    var pass = 10 + findMod(mental.WIS);
+    if (document.getElementById("Wisdom").checked){
+        pass += prof;
+    }
+
+    if (chosen.Senses.Passive > pass){
+        pass = chosen.Senses.Passive;
+    }
+    
+    document.getElementById("passiveperception").value = pass;
+
+
     // for every attribiute set the scores of animal and player stats
     for (var i = 0; i < atrList.length; i++){
         atr = atrList[i].name.slice(0,3).toLowerCase(); // find the lower case abbreviations        
@@ -138,13 +151,32 @@ function displayWildShape(chosen){
                 document.getElementById(atr + "box").checked = false;
             }
         }
-
-        for (var i = 0; i < skillList.length; i++){
-            document.getElementById(skillList[i].name).value =
-        }
     }
 
-
+    // check if the user checked the skills as proficient then assign mod appropriate for mental or physical stat
+    for (var i = 0; i < skillList.length; i++){  
+        foundSkill = skillList[i].assocSkill;
+        if (foundSkill === "WIS" || foundSkill === "INT" || foundSkill ==="CHA"){ // mental
+            if (document.getElementById(skillList[i].name).checked){
+                document.getElementById(skillList[i].name + "-prof").checked = true;
+                document.getElementById(skillList[i].name + "-check").value = findMod(mental[skillList[i].assocSkill]) + prof; 
+            }
+            else{
+                document.getElementById(skillList[i].name + "-prof").checked = false;
+                document.getElementById(skillList[i].name + "-check").value = findMod(mental[skillList[i].assocSkill]); 
+            }
+        }
+        else{ // physical
+            if (document.getElementById(skillList[i].name).checked){
+                document.getElementById(skillList[i].name + "-prof").checked = true;
+                document.getElementById(skillList[i].name + "-check").value = findMod(chosen[skillList[i].assocSkill]) + prof; 
+            }
+            else{
+                document.getElementById(skillList[i].name + "-prof").checked = false;
+                document.getElementById(skillList[i].name + "-check").value = findMod(chosen[skillList[i].assocSkill]); 
+            }
+        }
+    }
     
 }
 
