@@ -2149,7 +2149,7 @@ const elements = `[
         "AC": 15,
         "HP": 90,
         "Speed": 0,
-        "FLy": 90,
+        "Fly": 90,
         "STR": 14,
         "DEX": 20,
         "CON": 14,

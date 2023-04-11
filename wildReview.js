@@ -101,15 +101,68 @@ function findMod(stat){
 }
 
 function needforspeed(chosen){
-    var quick = document.getElementById("speedClass");
+    var movement = document.getElementById("speedClass");
     document.getElementById("speed").value = chosen.Speed;
 
-    // check for fly speed box and rmeove it if it exists
-    if (document.getElementById("flybox") !== null){
-        var elem = document.getElementById("flybox");
-        elem.parentNode.removeChild(elem);
+    // check for burrow speed box and remove it if it exists
+    if (document.getElementById("burrowbox") !== null){
+        var remburrow = document.getElementById("burrowbox");
+        remburrow.parentNode.removeChild(remburrow);
     }
 
+    // check for climb speed box and remove it if it exists
+    if (document.getElementById("climbbox") !== null){
+        var remclimb = document.getElementById("climbbox");
+        remclimb.parentNode.removeChild(remclimb);
+    }
+
+    // check for fly speed box and remove it if it exists
+    if (document.getElementById("flybox") !== null){
+        var remfly = document.getElementById("flybox");
+        remfly.parentNode.removeChild(remfly);
+    }
+
+    // check for swim speed box and remove it if it exists
+    if (document.getElementById("swimbox") !== null){
+        var remswim = document.getElementById("swimbox");
+        remswim.parentNode.removeChild(remswim);
+    }
+
+    // add Burrow speed if one exists
+    if (typeof chosen.Burrow !== "undefined") {
+        var burrowbox = document.createElement('div');
+        burrowbox.setAttribute('id', 'burrowbox');
+        var burrowlabel = document.createElement('label');
+        burrowlabel.innerHTML = "Burrow";
+        burrowlabel.setAttribute('for', 'burrowspeed');
+        var burrowspeed = document.createElement('input');
+        burrowspeed.type = 'text';
+        burrowspeed.setAttribute('name', 'burrowspeed');
+        burrowspeed.setAttribute('id', 'burrowspeed');
+        burrowspeed.value = chosen.Burrow;
+        burrowbox.appendChild(burrowlabel);
+        burrowbox.appendChild(burrowspeed);
+        movement.appendChild(burrowbox);
+    }
+
+    // add Burrow speed if one exists
+    if (typeof chosen.Climb !== "undefined") {
+        var climbbox = document.createElement('div');
+        climbbox.setAttribute('id', 'climbbox');
+        var climblabel = document.createElement('label');
+        climblabel.innerHTML = "Climb";
+        climblabel.setAttribute('for', 'climbspeed');
+        var climbspeed = document.createElement('input');
+        climbspeed.type = 'text';
+        climbspeed.setAttribute('name', 'climbspeed');
+        climbspeed.setAttribute('id', 'climbspeed');
+        climbspeed.value = chosen.Climb;
+        climbbox.appendChild(climblabel);
+        climbbox.appendChild(climbspeed);
+        movement.appendChild(climbbox);
+    }
+
+        // add fly speed if one exists
     if (typeof chosen.Fly !== "undefined") {
         var flybox = document.createElement('div');
         flybox.setAttribute('id', 'flybox');
@@ -123,9 +176,25 @@ function needforspeed(chosen){
         flyspeed.value = chosen.Fly;
         flybox.appendChild(flylabel);
         flybox.appendChild(flyspeed);
-        quick.appendChild(flybox);
+        movement.appendChild(flybox);
     }
-    //  swim, burrow, climb
+
+    // add Swim speed if one exists
+    if (typeof chosen.Swim !== "undefined") {
+        var swimbox = document.createElement('div');
+        swimbox.setAttribute('id', 'swimbox');
+        var swimlabel = document.createElement('label');
+        swimlabel.innerHTML = "Swim";
+        swimlabel.setAttribute('for', 'swimspeed');
+        var swimspeed = document.createElement('input');
+        swimspeed.type = 'text';
+        swimspeed.setAttribute('name', 'swimspeed');
+        swimspeed.setAttribute('id', 'swimspeed');
+        swimspeed.value = chosen.Swim;
+        swimbox.appendChild(swimlabel);
+        swimbox.appendChild(swimspeed);
+        movement.appendChild(swimbox);
+    }
 }
 
 //take chosen animal and build table with correct stats
@@ -134,8 +203,10 @@ function displayWildShape(chosen){
     document.getElementById("creatureName").value = chosen.Name; 
     document.getElementById("proficiencybonus").value = "+ " + prof; // proficiency bonus
     document.getElementById("ac").value = chosen.AC; //ac
-    document.getElementById("initiative").value = "+ " + findMod(chosen.DEX); // initiative
+    document.getElementById("initiative").value = findMod(chosen.DEX); // initiative
     needforspeed(chosen);
+    document.getElementById("maxhp").value = chosen.HP;
+    document.getElementById("currenthp").value = chosen.HP;
 
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){
