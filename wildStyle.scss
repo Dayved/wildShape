@@ -96,7 +96,7 @@ form.charsheet{
     section.charname{
       border: 1px solid black;
       border-right: 0;
-      border-radius: $radius 0 0 $radius;
+      border-radius: $radius $radius $radius $radius;
       padding: 5px 0;
       background-color: $faded-light;
       width: 30%;
