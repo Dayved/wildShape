@@ -81,8 +81,7 @@ form.charsheet header {
 }
 form.charsheet header section.charname {
   border: 1px solid black;
-  border-right: 0;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px 10px 10px;
   padding: 5px 0;
   background-color: #eee;
   width: 30%;

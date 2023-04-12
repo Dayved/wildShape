@@ -205,8 +205,8 @@ function displayWildShape(chosen){
     document.getElementById("ac").value = chosen.AC; //ac
     document.getElementById("initiative").value = findMod(chosen.DEX); // initiative
     needforspeed(chosen);
-    document.getElementById("maxhp").value = chosen.HP;
-    document.getElementById("currenthp").value = chosen.HP;
+    document.getElementById("maxhp").value = chosen.HP; // max hp
+    document.getElementById("currenthp").value = chosen.HP; //currrent hp
 
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){
@@ -251,26 +251,38 @@ function displayWildShape(chosen){
     // check if the user checked the skills as proficient then assign mod appropriate for mental or physical stat. Assign skill totals
     for (var i = 0; i < skillList.length; i++){  
         foundSkill = skillList[i].assocSkill;
+        var tempskill;
+
         if (foundSkill === "WIS" || foundSkill === "INT" || foundSkill ==="CHA"){ // mental
             if (document.getElementById(skillList[i].name).checked){
                 document.getElementById(skillList[i].name + "-prof").checked = true;
-                document.getElementById(skillList[i].name + "-check").value = findMod(mental[skillList[i].assocSkill]) + prof; 
+                tempskill = findMod(mental[skillList[i].assocSkill]) + prof; 
             }
             else{
                 document.getElementById(skillList[i].name + "-prof").checked = false;
-                document.getElementById(skillList[i].name + "-check").value = findMod(mental[skillList[i].assocSkill]); 
+                tempskill = findMod(mental[skillList[i].assocSkill]); 
             }
         }
         else{ // physical
             if (document.getElementById(skillList[i].name).checked){
                 document.getElementById(skillList[i].name + "-prof").checked = true;
-                document.getElementById(skillList[i].name + "-check").value = findMod(chosen[skillList[i].assocSkill]) + prof; 
+                tempskill = findMod(chosen[skillList[i].assocSkill]) + prof; 
             }
             else{
                 document.getElementById(skillList[i].name + "-prof").checked = false;
-                document.getElementById(skillList[i].name + "-check").value = findMod(chosen[skillList[i].assocSkill]); 
+                tempskill = findMod(chosen[skillList[i].assocSkill]); 
             }
         }
+
+        // check if animal has a modifier for that skill
+        if (chosen.Skills[skillList[i].name] !== null){
+            // check if that modifier is larger than the players, if it is keep it
+            if (chosen.Skills[skillList[i].name] > tempskill){
+                tempskill = chosen.Skills[skillList[i].name];
+            }
+        }
+
+        document.getElementById(skillList[i].name + "-check").value = tempskill;
     }
     
 }
