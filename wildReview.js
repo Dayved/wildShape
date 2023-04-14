@@ -197,6 +197,19 @@ function needforspeed(chosen){
     }
 }
 
+// find attacks (and actions?) from animal
+function falconpunch(chosen){
+    var table = document.getElementById("attacksandactions");
+    // clean the table
+    while (table.hasChildNodes()){
+        table.removeChild(table.firstChild);
+    }
+
+    if (typeof chosen.Actions === "undefined"){
+
+    }
+}
+
 //take chosen animal and build table with correct stats
 function displayWildShape(chosen){
     // set name of animal on the character sheet
@@ -207,6 +220,7 @@ function displayWildShape(chosen){
     needforspeed(chosen);
     document.getElementById("maxhp").value = chosen.HP; // max hp
     document.getElementById("currenthp").value = chosen.HP; //currrent hp
+    falconpunch(chosen); // assign attacks
 
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){
@@ -274,7 +288,7 @@ function displayWildShape(chosen){
             }
         }
 
-        // check if animal has a modifier for that skill
+        // check if animal has any skills and if that modifier is greater than users
         if (typeof chosen.Skills !== "undefined"){
             // check if that modifier is larger than the players, if it is keep it
             if (chosen.Skills[skillList[i].name] > tempskill && chosen.Skills[skillList[i].name] !== null){
