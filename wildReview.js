@@ -275,9 +275,9 @@ function displayWildShape(chosen){
         }
 
         // check if animal has a modifier for that skill
-        if (chosen.Skills[skillList[i].name] !== null){
+        if (typeof chosen.Skills !== "undefined"){
             // check if that modifier is larger than the players, if it is keep it
-            if (chosen.Skills[skillList[i].name] > tempskill){
+            if (chosen.Skills[skillList[i].name] > tempskill && chosen.Skills[skillList[i].name] !== null){
                 tempskill = chosen.Skills[skillList[i].name];
             }
         }
