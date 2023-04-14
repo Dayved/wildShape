@@ -506,7 +506,6 @@ form.charsheet main section.attacksandspellcasting > div {
   flex-direction: column;
 }
 form.charsheet main section.attacksandspellcasting > div > label {
-  order: 3;
   text-align: center;
 }
 form.charsheet main section.attacksandspellcasting > div > table {

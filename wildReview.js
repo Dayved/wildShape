@@ -200,13 +200,20 @@ function needforspeed(chosen){
 // find attacks (and actions?) from animal
 function falconpunch(chosen){
     var table = document.getElementById("attacksandactions");
+    var textarea = document.getElementById("actions");
     // clean the table
     while (table.hasChildNodes()){
         table.removeChild(table.firstChild);
     }
 
-    if (typeof chosen.Actions === "undefined"){
-
+    if (typeof chosen.Actions !== "undefined"){
+        var actions = Object.keys(chosen.Actions);
+        for (var i = 0; i < Object.keys(chosen.Actions).length; i++){
+            if (typeof chosen.Actions[actions[i]].Attack === null){
+                textarea.value = chosen.Actions[actions[i]];
+            }
+        }
+        
     }
 }
 
