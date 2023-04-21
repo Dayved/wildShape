@@ -201,19 +201,46 @@ function needforspeed(chosen){
 function falconpunch(chosen){
     var table = document.getElementById("attacksandactions");
     var textarea = document.getElementById("actions");
+    // clear actions
+    textarea.value = "";
+
     // clean the table
-    
     while (table.hasChildNodes()){
         table.removeChild(table.firstChild);
     }
+
     // if the animal has actions
     if (typeof chosen.Actions !== "undefined"){
         var actions = Object.keys(chosen.Actions);
         for (var i = 0; i < Object.keys(chosen.Actions).length; i++){
-            if (typeof chosen.Actions[actions[i]].Attack === "undefined"){
+            if (actions[i] === "Multiattack" || actions[i] === "Swallow"){
                 textarea.value = actions[i] + ": " + chosen.Actions[actions[i]];
-            } else{
-                
+            } else if (actions[i] === "Web"){
+                var attackrow = table.insertRow(0);
+                var attackname = attackrow.insertCell(0);
+                var attackrange = attackrow.insertCell(1);
+                var attackbonus = attackrow.insertCell(2);
+                var attackdamage = attackrow.insertCell(3);
+                var attackspecial = attackrow.insertCell(4);
+
+                attackname.innerHTML = actions[i];
+                attackrange.innerHTML = chosen.Actions[actions[i]].Range;
+                attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
+                attackdamage.innerHTML = "";
+                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + " \n" + chosen.Actions[actions[i]].Special;
+            }else{
+                var attackrow = table.insertRow(0);
+                var attackname = attackrow.insertCell(0);
+                var attackrange = attackrow.insertCell(1);
+                var attackbonus = attackrow.insertCell(2);
+                var attackdamage = attackrow.insertCell(3);
+                var attackspecial = attackrow.insertCell(4);
+
+                attackname.innerHTML = actions[i];
+                attackrange.innerHTML = chosen.Actions[actions[i]].Range;
+                attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
+                attackdamage.innerHTML = "";
+                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + " \n" + chosen.Actions[actions[i]].Special;
             }
         }
         

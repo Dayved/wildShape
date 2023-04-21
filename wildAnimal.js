@@ -17,7 +17,7 @@ const beasts = `[
             "Pack Tactics": "The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
         }
     },
 
@@ -40,7 +40,7 @@ const beasts = `[
             "Keen Smell": "The badger has advantage on Wisdom (Perception) checks that rely on smell."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -64,7 +64,7 @@ const beasts = `[
             "Keen Hearing": "The bat has advantage on Wisdom (Perception) checks that rely on hearing."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -90,7 +90,7 @@ const beasts = `[
             "Keen Smell": "The cat has advantage on Wisdom (Perception) checks that rely on smell."
         },
         "Actions": {
-            "Claws": { "Attack": "Melee", "To Hit": 0, "Reach": 5, "Damage": "1", "Type": "slashing" }
+            "Claws": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
 
@@ -116,7 +116,7 @@ const beasts = `[
             "Amphibious": "The crab can breathe air and water."
         },
         "Actions": {
-            "Claw": { "Attack": "Melee", "To Hit": 0, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
+            "Claw": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
         }
     },
 
@@ -134,7 +134,7 @@ const beasts = `[
         },
         "CR": "0",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
     },
 
@@ -159,7 +159,7 @@ const beasts = `[
             "Keen Sight": " The eagle has advantage on Wisdom (Perception) checks that rely on sight."
         },
         "Actions": {
-            "Talons": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing" }
+            "Talons": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing" }
         }
     },
 
@@ -186,7 +186,7 @@ const beasts = `[
             "Keen hearing": "The fox has advantage on Wisdom (Perception) checks that rely on hearing"
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
     },
 
@@ -233,7 +233,7 @@ const beasts = `[
             "Illumination": "The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 1, "Reach": 5, "Damage": "1d6-1", "Type": "slashing" }
+            "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d6-1", "Type": "slashing" }
         }
     },
 
@@ -255,7 +255,7 @@ const beasts = `[
             "Sure-Footed": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d4+1", "Type": "bludgeoning" }
+            "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d4+1", "Type": "bludgeoning" }
         }
     },
 
@@ -280,7 +280,7 @@ const beasts = `[
             "Keen Sight": "The hawk has advantage on Wisdom (Perception) checks that rely on sight."
         },
         "Actions": {
-            "Talons": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1", "Type": "slashing" }
+            "Talons": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
 
@@ -304,7 +304,7 @@ const beasts = `[
             "Pack Tactics": "The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1d6", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d6", "Type": "piercing" }
         }
     },
 
@@ -329,7 +329,7 @@ const beasts = `[
             "Pack Tactics": "The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 1, "Reach": 5, "Damage": "1d4-1", "Type": "piercing" }
         }
     },
 
@@ -349,7 +349,7 @@ const beasts = `[
         },
         "CR": "0",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -378,7 +378,7 @@ const beasts = `[
             "Water Breathing": "The octopus can breathe only underwater."
         },
         "Actions": {
-            "Tentacles": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target." },
+            "Tentacles": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 10). Until this grapple ends, the octopus can't use its tentacles on another target." },
             "Ink Cloud": { "Recharge": "Short or Long rest", "Effect": " A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action." }
         }
     },
@@ -407,7 +407,7 @@ const beasts = `[
             "Keen Hearing and Sight": "The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight."
         },
         "Actions": {
-            "Talons": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1", "Type": "slashing" }
+            "Talons": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1", "Type": "slashing" }
         }
     },
 
@@ -431,7 +431,7 @@ const beasts = `[
             "Water Breathing": "The quipper can breathe only underwater."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -453,7 +453,7 @@ const beasts = `[
             "Keen Smell": "The rat has advantage on Wisdom (Perception) checks that rely on smell."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 0, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -478,7 +478,7 @@ const beasts = `[
             "Mimicry": "The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
         },
         "Actions": {
-            "Beak": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -497,7 +497,7 @@ const beasts = `[
         },
         "CR": "0",
         "Actions": {
-            "Sting": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "On hit the target must make a DC 9 Constitution saving throw, taking 4 (1d8) poison damage on a failed save, or half as much damage on a successful one" }
+            "Sting": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "On hit the target must make a DC 9 Constitution saving throw, taking 4 (1d8) poison damage on a failed save, or half as much damage on a successful one" }
         }
     },
 
@@ -544,7 +544,7 @@ const beasts = `[
             "Web Walker": "The spider ignores movement restrictions caused by webbing."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "Plus 7 (3d4) poison damage." }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "Plus 7 (3d4) poison damage." }
         }
     },
 
@@ -570,7 +570,7 @@ const beasts = `[
             "Pack Tactics": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Beak": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
+            "Beak": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4", "Type": "piercing" }
         }
     },
 
@@ -595,7 +595,7 @@ const beasts = `[
             "Keen Hearing and Smell": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing" }
         }
     },
 
@@ -621,7 +621,7 @@ const beasts = `[
             "Pack Tactics": "The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Beak": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
+            "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
         }
     },
 
@@ -639,7 +639,7 @@ const beasts = `[
         },
         "CR": ".125",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d4", "Type": "bludgeoning" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d4", "Type": "bludgeoning" }
         }
     },
 
@@ -666,7 +666,7 @@ const beasts = `[
             "Hold Breath": "The dolphin can hold its breath for 20 minutes."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "bludgeoning" }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "bludgeoning" }
         }
     },
 
@@ -690,7 +690,7 @@ const beasts = `[
             "Flyby": "The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1", "Type": "bludgeoning" }
         }
     },
 
@@ -716,7 +716,7 @@ const beasts = `[
             "Amphibious": "The crab can breathe air and water."
         },
         "Actions": {
-            "Claw": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 11). The crab has two Claws, each of which can grapple only one target." }
+            "Claw": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning", "Special": "On hit the target is grappled (escape DC 11). The crab has two Claws, each of which can grapple only one target." }
         }
     },
 
@@ -739,7 +739,7 @@ const beasts = `[
             "Pack Tactics": "The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing" }
         }
     },
 
@@ -765,7 +765,7 @@ const beasts = `[
             "Keen Hearing and Smell": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d4+3", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d4+3", "Type": "piercing" }
         }
     },
 
@@ -789,7 +789,7 @@ const beasts = `[
             "Keen Hearing and Smell": "The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone." }
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone." }
         }
     },
 
@@ -811,7 +811,7 @@ const beasts = `[
             "Sure-Footed": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone"
         },
         "Actions": {
-            "Hooves": { "Attack": "Melee", "To Hit": 2, "Reach": 5, "Damage": "1d4+2", "Type": "bludgeoning" }
+            "Hooves": { "Attack": "Melee", "ToHit": 2, "Reach": 5, "Damage": "1d4+2", "Type": "bludgeoning" }
         }
     },
 
@@ -831,7 +831,7 @@ const beasts = `[
         },
         "CR": ".125",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "The target must make a DC 10 Constitution saving throw, taking 5 (2d4) poison damage on a failed save, or half as much damage on a successful one." }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1", "Type": "piercing", "Special": "The target must make a DC 10 Constitution saving throw, taking 5 (2d4) poison damage on a failed save, or half as much damage on a successful one." }
         }
     },
 
@@ -849,7 +849,7 @@ const beasts = `[
         },
         "CR": ".125",
         "Actions": {
-            "Hooves": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
+            "Hooves": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
         }
     },
 
@@ -867,7 +867,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Beak": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "slashing" }
+            "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "slashing" }
         }
     },
 
@@ -889,7 +889,7 @@ const beasts = `[
             "Relentless": {"Recharge": "Short or Long Rest", "Effect": "If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."}
         },
         "Actions": {
-            "Tusk": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "slashing" }
+            "Tusk": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "slashing" }
         }
     },
 
@@ -909,8 +909,8 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
-            "Constrict": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target." }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
+            "Constrict": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 14). Until this grapple ends, the creature is restrained, and the snake can't constrict another target." }
         }
     },
 
@@ -928,7 +928,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Hooves": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
+            "Hooves": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d4+2", "Type": "bludgeoning" }
         }
     },
 
@@ -949,8 +949,8 @@ const beasts = `[
             "Charge": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
-            "Hooves": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
+            "Ram": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
+            "Hooves": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
         }
     },
 
@@ -974,8 +974,8 @@ const beasts = `[
         },
         "Actions": {
             "Multiattack": "The badger makes two attacks: one with its bite and one with its claws.",
-            "Bite": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing" },
-            "Claws": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "2d4+1", "Type": "slashing" }
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing" },
+            "Claws": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "2d4+1", "Type": "slashing" }
         }
     },
 
@@ -999,7 +999,7 @@ const beasts = `[
             "Keen Hearing": "The bat has advantage on Wisdom (Perception) checks that rely on hearing."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" }
         }
     },
 
@@ -1019,7 +1019,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing", "Special":"Target must succeed on a DC 11 Constitution saving throw or take 10 (3d6) poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way." }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "piercing", "Special":"Target must succeed on a DC 11 Constitution saving throw or take 10 (3d6) poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way." }
         }
     },
 
@@ -1047,7 +1047,7 @@ const beasts = `[
             "Standing Leap": "The frog's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special":"Target is grappled (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target." },
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special":"Target is grappled (escape DC 11). Until this grapple ends, the target is restrained, and the frog can't bite another target." },
             "Swallow": "The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time. If the frog dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone."
         }
     },
@@ -1068,7 +1068,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
         }
     },
 
@@ -1096,7 +1096,7 @@ const beasts = `[
             "Keen Hearing and Sight": "The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight."
         },
         "Actions": {
-            "Talons": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "2d6+1", "Type": "slashing"}
+            "Talons": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "2d6+1", "Type": "slashing"}
         }
     },
 
@@ -1119,7 +1119,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 10, "Damage": "1d4+4", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."}
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 10, "Damage": "1d4+4", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one."}
         }
     },
 
@@ -1149,7 +1149,7 @@ const beasts = `[
             "Web Walker": "The spider ignores movement restrictions caused by webbing."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
+            "Bite": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "piercing", "Special": "Target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
         }
     },
 
@@ -1171,7 +1171,7 @@ const beasts = `[
             "Charge": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
         },
         "Actions": {
-            "Gore": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing"}
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing"}
         }
     },
 
@@ -1198,8 +1198,8 @@ const beasts = `[
             "Pounce": "If the panther moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the panther can make one bite attack against it as a bonus action."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing"},
-            "Claw": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing"}
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing"},
+            "Claw": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d4+2", "Type": "slashing"}
         }
     },
 
@@ -1217,7 +1217,7 @@ const beasts = `[
         },
         "CR": ".25",
         "Actions": {
-            "Hooves": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
+            "Hooves": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning" }
         }
     },
 
@@ -1239,7 +1239,7 @@ const beasts = `[
             "Charge": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
         },
         "Actions": {
-            "Gore": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
         }
     },
 
@@ -1263,7 +1263,7 @@ const beasts = `[
             "Stench": "Any creature other than a stench kow that starts its turn within 5 feet of the stench kow must succeed on a DC 12 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all stench kows for 1 hour."
         },
         "Actions": {
-            "Gore": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
+            "Gore": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d6+4", "Type": "piercing" }
         }
     },
 
@@ -1289,7 +1289,7 @@ const beasts = `[
             "Pack Tactics": "The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."}
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."}
         }
     },
 
@@ -1313,8 +1313,8 @@ const beasts = `[
         "CR": ".5",
         "Actions": {
             "Multiattack": "The ape makes two fist attacks.",
-            "Fist": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
-            "Rock": { "Attack": "Ranged", "To Hit": 5, "Range": "25/50", "Damage": "1d6+3", "Type": "bludgeoning" }
+            "Fist": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "bludgeoning" },
+            "Rock": { "Attack": "Ranged", "ToHit": 5, "Range": "25/50", "Damage": "1d6+3", "Type": "bludgeoning" }
         }
     },
 
@@ -1340,8 +1340,8 @@ const beasts = `[
         },
         "Actions": {
             "Multiattack": "The bear makes two attacks: one with its Bite and one with its Claws.",
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
-            "Claws": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "slashing" }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing" },
+            "Claws": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "slashing" }
         }
     },
 
@@ -1366,7 +1366,7 @@ const beasts = `[
             "Hold Breath": "The crocodile can hold its breath for 15 minutes."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "The target is grappled (escape DC 12). Until this grapple ends, the target is restrained, and the crocodile can't bite another target." }
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "The target is grappled (escape DC 12). Until this grapple ends, the target is restrained, and the crocodile can't bite another target." }
         }
     },
 
@@ -1388,7 +1388,7 @@ const beasts = `[
             "Sure-Footed": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning"}
+            "Ram": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d4+3", "Type": "bludgeoning"}
         }
     },
 
@@ -1411,7 +1411,7 @@ const beasts = `[
             "Water Breathing": "The sea horse can breathe only underwater."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
+            "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
         }
     },
 
@@ -1430,7 +1430,7 @@ const beasts = `[
         },
         "CR": ".5",
         "Actions": {
-            "Sting": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing", "Special": "The target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
+            "Sting": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d6+2", "Type": "piercing", "Special": "The target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."}
         }
     },
 
@@ -1454,7 +1454,7 @@ const beasts = `[
             "Water Breathing": "The manta ray can breathe only underwater."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
+            "Ram": { "Attack": "Melee", "ToHit": 3, "Reach": 5, "Damage": "1d6+1", "Type": "bludgeoning"}
         }
     },
 
@@ -1481,7 +1481,7 @@ const beasts = `[
             "Water Breathing": "The shark can breathe only underwater."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "piercing"}
         }
     },
 
@@ -1502,7 +1502,7 @@ const beasts = `[
             "Trampling Charge": "If the horse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action."
         },
         "Actions": {
-            "Hooves": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "bludgeoning"}
+            "Hooves": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "bludgeoning"}
         }
     },
 
@@ -1528,8 +1528,8 @@ const beasts = `[
         },
         "Actions": {
             "Multiattack": "The bear makes two attacks: one with its bite and one with its claws.",
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1d8+4", "Type": "piercing"},
-            "Claws": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "slashing"}
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d8+4", "Type": "piercing"},
+            "Claws": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+4", "Type": "slashing"}
         }
     },
 
@@ -1555,7 +1555,7 @@ const beasts = `[
             "Pack Tactics": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."}
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing", "Special": "If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."}
         }
     },
 
@@ -1580,8 +1580,8 @@ const beasts = `[
             "Keen Sight": "The eagle has advantage on Wisdom (Perception) checks that rely on sight."        },
         "Actions": {
             "Multiattack": "The eagle makes two attacks: one with its beak and one with its talons.",
-            "Beak": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "piercing"},
-            "Talons": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "slashing"}
+            "Beak": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "piercing"},
+            "Talons": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "slashing"}
         }
     },
 
@@ -1604,7 +1604,7 @@ const beasts = `[
         "Features": {
             "Rampage": "When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack."        },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing"}
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "piercing"}
         }
     },
 
@@ -1632,7 +1632,7 @@ const beasts = `[
             "Underwater Camouflage": "The octopus has advantage on Dexterity (Stealth) checks made while underwater.",
             "Water Breathing": "The octopus can breathe only underwater."},
         "Actions": {
-            "Tentacles": { "Attack": "Melee", "To Hit": 5, "Reach": 15, "Damage": "2d6+3", "Type": "bludgeoning", "Special": "If the target is a creature, it is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the octopus can't use its tentacles on another target."},
+            "Tentacles": { "Attack": "Melee", "ToHit": 5, "Reach": 15, "Damage": "2d6+3", "Type": "bludgeoning", "Special": "If the target is a creature, it is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the octopus can't use its tentacles on another target."},
             "Ink Cloud": {"Recharge": "Short or Long Rest", "Effect": "A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action."}
         }
     },
@@ -1661,8 +1661,8 @@ const beasts = `[
             "Web Sense": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.",
             "Web Walker": "The spider ignores movement restrictions caused by webbing."},
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing", "Special": "The target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."},
-            "Web": {"Recharge": "Short or Long Rest", "Attack": "Ranged", "To Hit": 5, "Range": "30/60", "Special": "The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."}
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing", "Special": "The target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."},
+            "Web": {"Recharge": "Short or Long Rest", "Attack": "Ranged", "ToHit": 5, "Range": "30/60", "Special": "The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."}
         }
     },
 
@@ -1685,7 +1685,7 @@ const beasts = `[
             "Amphibious": "The toad can breathe air and water.",
             "Standing Leap": "The toad's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start."},
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "Plus 5 (1d10) poison damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the toad can't bite another target."},
+            "Bite": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "Plus 5 (1d10) poison damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the toad can't bite another target."},
             "Swallow": "The toad makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the toad, and it takes 10 (3d6) acid damage at the start of each of the toad's turns. The toad can have only one target swallowed at a time. If the toad dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone."
         }
     },
@@ -1712,8 +1712,8 @@ const beasts = `[
             "Pack Tactics": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally isn't incapacitated."},
         "Actions": {
             "Multiattack": "The vulture makes two attacks: one with its beak and one with its talons.",
-            "Beak": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "piercing"},
-            "Talons": { "Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "2d6+2", "Type": "slashing"}
+            "Beak": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d4+2", "Type": "piercing"},
+            "Talons": { "Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "2d6+2", "Type": "slashing"}
         }
     },
 
@@ -1740,8 +1740,8 @@ const beasts = `[
             "Pounce": "If the lion moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action.",
             "Running Leap": "With a 10-foot running start, the lion can long jump up to 25 feet."},
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing"},
-            "Claw": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "slashing"}
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing"},
+            "Claw": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d6+3", "Type": "slashing"}
         }
     },
 
@@ -1768,8 +1768,8 @@ const beasts = `[
             "Pounce": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a Claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one Bite attack against it as a bonus action."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d10+3", "Type": "piercing" },
-            "Claw": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "slashing" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d10+3", "Type": "piercing" },
+            "Claw": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "slashing" }
         }
     },
 
@@ -1796,7 +1796,7 @@ const beasts = `[
             "Running Leap": "With a 10-foot running start, the wild dog alpha can long jump up to 25 feet."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing" }
+            "Bite": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "1d8+3", "Type": "piercing" }
         }
     },
 
@@ -1817,7 +1817,7 @@ const beasts = `[
             "Charge": "If the aurochs moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
         },
         "Actions": {
-            "Gore": { "Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "2d8+5", "Type": "piercing" }
+            "Gore": { "Attack": "Melee", "ToHit": 7, "Reach": 5, "Damage": "2d8+5", "Type": "piercing" }
         }
     },
 
@@ -1839,7 +1839,7 @@ const beasts = `[
             "Relentles": {"Recharge": "Short or Long Rest", "Effect": "If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."}
         },
         "Actions": {
-            "Tusk": { "Attack": "Melee", "To Hit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "slashing" }
+            "Tusk": { "Attack": "Melee", "ToHit": 5, "Reach": 5, "Damage": "2d6+3", "Type": "slashing" }
         }
     },
 
@@ -1862,8 +1862,8 @@ const beasts = `[
         },
         "CR": "2",
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 10, "Damage": "2d6+4", "Type": "piercing" },
-            "Constrict": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d8+4", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 16). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."}
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 10, "Damage": "2d6+4", "Type": "piercing" },
+            "Constrict": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d8+4", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 16). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."}
         }
     },
 
@@ -1887,8 +1887,8 @@ const beasts = `[
             "Charge": "If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone."
         },
         "Actions": {
-            "Ram": { "Attack": "Melee", "To Hit": 6, "Reach": 10, "Damage": "2d6+4", "Type": "bludgeoning" },
-            "Hooves": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "4d8+4", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 16). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."}
+            "Ram": { "Attack": "Melee", "ToHit": 6, "Reach": 10, "Damage": "2d6+4", "Type": "bludgeoning" },
+            "Hooves": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "4d8+4", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 16). Until this grapple ends, the creature is restrained, and the snake can't constrict another target."}
         }
     },
 
@@ -1915,7 +1915,7 @@ const beasts = `[
             "Water Breathing": "The shark can breathe only underwater."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d8+4", "Type": "piercing"}
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d8+4", "Type": "piercing"}
         }
     },
 
@@ -1941,8 +1941,8 @@ const beasts = `[
         },
         "Actions": {
             "Multiattack": "The bear makes two attacks: one with its bite and one with its claws.",
-            "Bite": { "Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "1d8+5", "Type": "piercing"},
-            "Claws": { "Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "2d6+5", "Type": "slashing"}
+            "Bite": { "Attack": "Melee", "ToHit": 7, "Reach": 5, "Damage": "1d8+5", "Type": "piercing"},
+            "Claws": { "Attack": "Melee", "ToHit": 7, "Reach": 5, "Damage": "2d6+5", "Type": "slashing"}
         }
     },
 
@@ -1963,7 +1963,7 @@ const beasts = `[
             "Charge": "If the rhinoceros moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
         },
         "Actions": {
-            "Gore": { "Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "2d8+5", "Type": "bludgeoning"}
+            "Gore": { "Attack": "Melee", "ToHit": 7, "Reach": 5, "Damage": "2d8+5", "Type": "bludgeoning"}
         }
     },
 
@@ -1989,8 +1989,8 @@ const beasts = `[
             "Pounce": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action."
         },
         "Actions": {
-            "Bite": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "1d10+5", "Type": "piercing"},
-            "Claw": { "Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d6+5", "Type": "slashing"}
+            "Bite": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "1d10+5", "Type": "piercing"},
+            "Claw": { "Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+5", "Type": "slashing"}
         }
     },
 
@@ -2010,8 +2010,8 @@ const beasts = `[
         "CR": "3",
         "Actions": {
             "Multiattack": "The scorpion makes three attacks: two with its claws and one with its sting.",
-            "Claw": {"Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 12). The scorpion has two claws, each of which can grapple only one target."},
-            "Sting": {"Attack": "Melee", "To Hit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "The target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one."}
+            "Claw": {"Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d8+2", "Type": "bludgeoning", "Special": "The target is grappled (escape DC 12). The scorpion has two claws, each of which can grapple only one target."},
+            "Sting": {"Attack": "Melee", "ToHit": 4, "Reach": 5, "Damage": "1d10+2", "Type": "piercing", "Special": "The target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one."}
         }
     },
 
@@ -2039,7 +2039,7 @@ const beasts = `[
             "Keen Hearing": "The whale has advantage on Wisdom (Perception) checks that rely on hearing."
         },
         "Actions": {
-            "Bite": {"Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "5d6+4", "Type": "piercing"}
+            "Bite": {"Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "5d6+4", "Type": "piercing"}
         }
     },
 
@@ -2060,8 +2060,8 @@ const beasts = `[
             "Trampling Charge": "If the elephant moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elephant can make one stomp attack against it as a bonus action."
         },
         "Actions": {
-            "Gore": {"Attack": "Melee", "To Hit": 8, "Reach": 5, "Damage": "3d8+6", "Type": "piercing"},
-            "Stomp": {"Attack": "Melee", "To Hit": 8, "Reach": 5, "Damage": "3d10+6", "Type": "bludgeoning"}
+            "Gore": {"Attack": "Melee", "ToHit": 8, "Reach": 5, "Damage": "3d8+6", "Type": "piercing"},
+            "Stomp": {"Attack": "Melee", "ToHit": 8, "Reach": 5, "Damage": "3d10+6", "Type": "bludgeoning"}
         }
     },
 
@@ -2087,8 +2087,8 @@ const beasts = `[
         },
         "Actions": {
             "Multiattack": "The crocodile makes two attacks: one with its bite and one with its tail.",
-            "Bite": {"Attack": "Melee", "To Hit": 8, "Reach": 5, "Damage": "3d10+5", "Type": "piercing", "Special": "the target is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the crocodile can't bite another target."},
-            "Tail": {"Attack": "Melee", "To Hit": 8, "Reach": 10, "Damage": "2d8+5", "Type": "bludgeoning", "Special": "If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked prone."}
+            "Bite": {"Attack": "Melee", "ToHit": 8, "Reach": 5, "Damage": "3d10+5", "Type": "piercing", "Special": "the target is grappled (escape DC 16). Until this grapple ends, the target is restrained, and the crocodile can't bite another target."},
+            "Tail": {"Attack": "Melee", "ToHit": 8, "Reach": 10, "Damage": "2d8+5", "Type": "bludgeoning", "Special": "If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked prone."}
         }
     },
 
@@ -2115,7 +2115,7 @@ const beasts = `[
             "Water Breathing": "The shark can breathe only underwater."
         },
         "Actions": {
-            "Bite": {"Attack": "Melee", "To Hit": 9, "Reach": 5, "Damage": "3d10+6", "Type": "piercing"}
+            "Bite": {"Attack": "Melee", "ToHit": 9, "Reach": 5, "Damage": "3d10+6", "Type": "piercing"}
         }
     },
 
@@ -2136,8 +2136,8 @@ const beasts = `[
             "Trampling Charge": "If the mammoth moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 18 Strength saving throw or be knocked prone. If the target is prone, the mammoth can make one stomp attack against it as a bonus action."
         },
         "Actions": {
-            "Gore": {"Attack": "Melee", "To Hit": 10, "Reach": 10, "Damage": "4d8+7", "Type": "piercing"},
-            "Stomp": {"Attack": "Melee", "To Hit": 10, "Reach": 5, "Damage": "4d10+7", "Type": "bludgeoning"}
+            "Gore": {"Attack": "Melee", "ToHit": 10, "Reach": 10, "Damage": "4d8+7", "Type": "piercing"},
+            "Stomp": {"Attack": "Melee", "ToHit": 10, "Reach": 5, "Damage": "4d10+7", "Type": "bludgeoning"}
         }
     }
 ]`;
@@ -2166,7 +2166,7 @@ const elements = `[
         },
         "Actions": {
             "Multiattack": "The elemental makes two slam attacks.",
-            "Slam": {"Attack": "Melee", "To Hit": 8, "Reach": 5, "Damage": "2d8+5", "Type": "bludgeoning"},
+            "Slam": {"Attack": "Melee", "ToHit": 8, "Reach": 5, "Damage": "2d8+5", "Type": "bludgeoning"},
             "Whirlwind": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone. If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone."}
         }
     },
@@ -2197,7 +2197,7 @@ const elements = `[
         },
         "Actions": {
             "Multiattack": "The elemental makes two slam attacks.",
-            "Slam": {"Attack": "Melee", "To Hit": 8, "Reach": 10, "Damage": "2d8+5", "Type": "bludgeoning" }
+            "Slam": {"Attack": "Melee", "ToHit": 8, "Reach": 10, "Damage": "2d8+5", "Type": "bludgeoning" }
         }
     },
 
@@ -2225,7 +2225,7 @@ const elements = `[
         },
         "Actions": {
             "Multiattack": "The elemental makes two touch attacks.",
-            "Touch": {"Attack": "Melee", "To Hit": 6, "Reach": 5, "Damage": "2d6+3", "Type": "fire", "Special": "If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns."}
+            "Touch": {"Attack": "Melee", "ToHit": 6, "Reach": 5, "Damage": "2d6+3", "Type": "fire", "Special": "If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns."}
         }
     },
 
@@ -2253,7 +2253,7 @@ const elements = `[
         },
         "Actions": {
             "Multiattack": "The elemental makes two slam attacks.",
-            "Slam": {"Attack": "Melee", "To Hit": 7, "Reach": 5, "Damage": "2d8+4", "Type": "bludgeoning"},
+            "Slam": {"Attack": "Melee", "ToHit": 7, "Reach": 5, "Damage": "2d8+4", "Type": "bludgeoning"},
             "Whelm": {"Recharge": "4-6", "Effect": "Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space. The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding."}
         }
     }
