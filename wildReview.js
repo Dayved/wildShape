@@ -271,6 +271,55 @@ function falconpunch(chosen){
     }
 }
 
+function falconfeat(chosen){
+    var table = document.getElementById("feats");
+
+    // clean the table
+    while (table.hasChildNodes()){
+        table.removeChild(table.firstChild);
+    }
+
+    // if the animal has actions
+    if (typeof chosen.Features !== "undefined"){
+        var feats = Object.keys(chosen.Features);
+        for (var i = 0; i < Object.keys(chosen.Features).length; i++){
+            
+                var featrow = table.insertRow(0);
+                var featname = featrow.insertCell(0);
+                var featdes = featrow.insertCell(1);
+
+                featname.innerHTML = feats[i];
+                featdes.innerHTML = chosen.Features[feats[i]];
+            }
+    }   
+}
+
+function falconsense(chosen){
+    var table = document.getElementById("senses");
+
+    // clean the table
+    while (table.hasChildNodes()){
+        table.removeChild(table.firstChild);
+    }
+
+    // if the animal has actions
+    if (typeof chosen.Senses !== "undefined"){
+        var sense = Object.keys(chosen.Senses);
+        for (var i = 0; i < Object.keys(chosen.Senses).length; i++){
+            
+            if (sense[i] !== "Passive"){
+                var senserow = table.insertRow(0);
+                var sensename = senserow.insertCell(0);
+                var sensedes = senserow.insertCell(1);
+
+                sensename.innerHTML = sense[i];
+                sensedes.innerHTML = chosen.Senses[sense[i]];
+            }
+        }
+    }   
+}
+
+
 //take chosen animal and build table with correct stats
 function displayWildShape(chosen){
     // set name of animal on the character sheet
@@ -282,6 +331,8 @@ function displayWildShape(chosen){
     document.getElementById("maxhp").value = chosen.HP; // max hp
     document.getElementById("currenthp").value = chosen.HP; //currrent hp
     falconpunch(chosen); // assign attacks
+    falconfeat(chosen); //get features
+    falconsense(chosen); //get sesnes
 
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){

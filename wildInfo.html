@@ -358,16 +358,55 @@
               <label for="temphp">Temporary Hit Points</label><input name="temphp" type="text" />
             </div>
           </div>
-          <div class = "regular">
-            <div class = "current">
-              <label for="senses">Extra Senses</label><input name="senses" type="text" />
+          <div class="hp">
+            <div class= "senses">
+              <label>Senses</label>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Range/Effect
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id = "senses">
+                  <tr>
+                    <td>
+                      <input name="senseName" type="text" />
+                    </td>
+                    <td>
+                      <input name="senseDes" type="text" />
+                    </td>
+              </table>
             </div>
           </div>
 
           <div class="hp">
             <div class= "features">
               <label>Features</label>
-              <textarea id = "features"></textarea>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id = "feats">
+                  <tr>
+                    <td>
+                      <input name="featureName" type="text" />
+                    </td>
+                    <td>
+                      <input name="featureDes" type="text" />
+                    </td>
+              </table>
             </div>
           </div>
         </section>

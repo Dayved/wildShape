@@ -349,6 +349,12 @@ form.charsheet main section.combat > div.hp > div.features {
   border-radius: 10px 10px 0 0;
 }
 
+form.charsheet main section.combat > div.hp > div.senses {
+  margin: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 0 0;
+}
+
 form.charsheet main section.combat > div.hp > div.regular > div.max {
   display: flex;
   justify-content: space-around;
