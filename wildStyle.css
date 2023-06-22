@@ -30,7 +30,6 @@ div.box {
 }
 
 form.charsheet {
-  width: 900px;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -343,6 +342,13 @@ form.charsheet main section.combat > div.hp > div.regular {
   margin-bottom: 5px;
   border-radius: 10px 10px 0 0;
 }
+
+form.charsheet main section.combat > div.hp > div.features {
+  margin: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 0 0;
+}
+
 form.charsheet main section.combat > div.hp > div.regular > div.max {
   display: flex;
   justify-content: space-around;
