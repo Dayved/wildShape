@@ -227,7 +227,7 @@ function falconpunch(chosen){
                 attackrange.innerHTML = chosen.Actions[actions[i]].Range;
                 attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
                 attackdamage.innerHTML = "";
-                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + " \n" + chosen.Actions[actions[i]].Special;
+                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + ". \n" + chosen.Actions[actions[i]].Special;
             }else if (actions[i] === "Ink Cloud" || actions[i] === "Whirlwind" || actions[i] === "Whelm"){
                 var attackrow = table.insertRow(0);
                 var attackname = attackrow.insertCell(0);
@@ -238,7 +238,7 @@ function falconpunch(chosen){
 
                 attackname.innerHTML = actions[i];
                 attackdamage.innerHTML = "";
-                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + " \n" + chosen.Actions[actions[i]].Effect;
+                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + ". \n" + chosen.Actions[actions[i]].Effect;
             }else{
                 var attackrow = table.insertRow(0);
                 var attackname = attackrow.insertCell(0);
@@ -283,14 +283,21 @@ function falconfeat(chosen){
     if (typeof chosen.Features !== "undefined"){
         var feats = Object.keys(chosen.Features);
         for (var i = 0; i < Object.keys(chosen.Features).length; i++){
+            var featrow = table.insertRow(0);
+            var featname = featrow.insertCell(0);
+            var featdes = featrow.insertCell(1);
             
-                var featrow = table.insertRow(0);
-                var featname = featrow.insertCell(0);
-                var featdes = featrow.insertCell(1);
-
+            if (typeof chosen.Features[feats[i]] === 'object'){
+                featname.innerHTML = feats[i];
+                featdes.innerHTML = "Recharge: " + chosen.Features[feats[i]].Recharge + ". \n" + chosen.Features[feats[i]].Effect;
+               
+            }
+            else {
                 featname.innerHTML = feats[i];
                 featdes.innerHTML = chosen.Features[feats[i]];
+                
             }
+        }
     }   
 }
 
