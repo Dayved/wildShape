@@ -248,14 +248,19 @@ function falconpunch(chosen){
                 var attackspecial = attackrow.insertCell(4);
 
                 attackname.innerHTML = actions[i];
-
+                //is it ranged?
                 if (chosen.Actions[actions[i]].Attack === "Ranged"){
                     attackrange.innerHTML = chosen.Actions[actions[i]].Range;
                 }else {
                     attackrange.innerHTML = chosen.Actions[actions[i]].Reach;
                 }
-
-                attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
+                //is user prof better than animal?
+                if (chosen.Actions[actions[i]].ToHit < prof){
+                    attackbonus.innerHTML = prof;
+                }else{
+                    attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
+                }
+                
                 attackdamage.innerHTML = chosen.Actions[actions[i]].Damage + " / " + chosen.Actions[actions[i]].Type;
 
                 if (typeof chosen.Actions[actions[i]].Special !== "undefined"){
@@ -339,7 +344,7 @@ function displayWildShape(chosen){
     document.getElementById("currenthp").value = chosen.HP; //currrent hp
     falconpunch(chosen); // assign attacks
     falconfeat(chosen); //get features
-    falconsense(chosen); //get sesnes
+    falconsense(chosen); //get senses
 
     var pass = 10 + findMod(mental.WIS);
     if (document.getElementById("Wisdom").checked){
