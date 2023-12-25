@@ -145,7 +145,7 @@ function needforspeed(chosen){
         movement.appendChild(burrowbox);
     }
 
-    // add Burrow speed if one exists
+    // add Climb speed if one exists
     if (typeof chosen.Climb !== "undefined") {
         var climbbox = document.createElement('div');
         climbbox.setAttribute('id', 'climbbox');
