@@ -213,7 +213,7 @@ function falconpunch(chosen){
     if (typeof chosen.Actions !== "undefined"){
         var actions = Object.keys(chosen.Actions);
         for (var i = 0; i < Object.keys(chosen.Actions).length; i++){
-            if (actions[i] === "Multiattack" || actions[i] === "Swallow"){
+            if (actions[i] === "Multiattack" || actions[i] === "Swallow" || actions[i] === "Ink Cloud" || actions[i] === "Whirlwind" || actions[i] === "Whelm"){
                 textarea.value = actions[i] + ": " + chosen.Actions[actions[i]];
             } else if (actions[i] === "Web"){
                 var attackrow = table.insertRow(0);
@@ -228,17 +228,6 @@ function falconpunch(chosen){
                 attackbonus.innerHTML = chosen.Actions[actions[i]].ToHit;
                 attackdamage.innerHTML = "";
                 attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + ". \n" + chosen.Actions[actions[i]].Special;
-            }else if (actions[i] === "Ink Cloud" || actions[i] === "Whirlwind" || actions[i] === "Whelm"){
-                var attackrow = table.insertRow(0);
-                var attackname = attackrow.insertCell(0);
-                var attackrange = attackrow.insertCell(1);
-                var attackbonus = attackrow.insertCell(2);
-                var attackdamage = attackrow.insertCell(3);
-                var attackspecial = attackrow.insertCell(4);
-
-                attackname.innerHTML = actions[i];
-                attackdamage.innerHTML = "";
-                attackspecial.innerHTML = "Recharge: " + chosen.Actions[actions[i]].Recharge + ". \n" + chosen.Actions[actions[i]].Effect;
             }else{
                 var attackrow = table.insertRow(0);
                 var attackname = attackrow.insertCell(0);
