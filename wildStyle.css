@@ -252,15 +252,16 @@ form.charsheet main > section section.attributes div.attr-applications div.list-
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li label {
   text-transform: none;
-  font-size: 8px;
+  font-size: 12px;
   text-align: left;
   order: 3;
+  color: white;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li span.skill {
-  color: #bbb;
+  color: white;
 }
 form.charsheet main > section section.attributes div.attr-applications div.list-section ul li input[type=text] {
-  width: 30px;
+  width: 150px;
   font-size: 12px;
   text-align: center;
   border: 0;

@@ -3,11 +3,23 @@ th,
 td {
   border: 1px solid black;
 }
-/* styles for the animals menu  */
 
+.bkgrd{
+  background-image: url('images/paper.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* styles for the animals menu  */
 .menu-label{
   float: left;
   width: auto;
+}
+
+.space{
+  padding-top: 2px;
+  width: 10px;
 }
 
 .vertical-menu {
@@ -18,27 +30,20 @@ td {
   border-collapse: collapse;
   border-spacing: 0;
   float: left;
-  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .vertical-menu div {
   margin-left:-5px;
   margin-right:-5px;
+  float: left;
 }
-
-.vertical-menu::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 
 .vertical-menu a {
   background-color: #eee;
   color: black;
   display: flex;
   padding: 12px;
-  
 }
 
 .vertical-menu a:hover {
