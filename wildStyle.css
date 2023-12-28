@@ -135,14 +135,14 @@ form.charsheet main div.label-container {
   border: 1px solid black;
   border-left: 0;
   text-align: center;
+  color: white
 }
 form.charsheet main div.label-container > label {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 1px;
   transform: translate(0%, 50%);
   width: 100%;
-  font-size: 8px;
+  font-size: 12px;
 }
 form.charsheet main > section {
   width: 32%;
