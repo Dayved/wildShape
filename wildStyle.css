@@ -333,6 +333,34 @@ form.charsheet main section.combat > div.armorclass > div input, form.charsheet 
   text-align: center;
   font-size: 30px;
 }
+form.charsheet main section.combat > div.armorclass, form.charsheet main section.combat > div.initiative, form.charsheet main section.combat > div.move {
+  flex-basis: 33.333%;
+}
+form.charsheet main section.combat > div.armorclass > div, form.charsheet main section.combat > div.initiative > div, form.charsheet main section.combat > div.move > div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 10px;
+}
+form.charsheet main section.combat > div.armorclass > div label, form.charsheet main section.combat > div.initiative > div label, form.charsheet main section.combat > div.move > div label {
+  font-size: 8px;
+  width: 50px;
+  border: 1px solid black;
+  border-top: 0;
+  background-color: white;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+}
+form.charsheet main section.combat > div.armorclass > div input, form.charsheet main section.combat > div.initiative > div input, form.charsheet main section.combat > div.move > div input {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
 form.charsheet main section.combat > div.hp {
   flex-basis: 100%;
 }

@@ -101,7 +101,7 @@ function findMod(stat){
 }
 
 function needforspeed(chosen){
-    var movement = document.getElementById("speedClass");
+    var movement = document.getElementById("moveClass");
     document.getElementById("speed").value = chosen.Speed;
 
     // check for burrow speed box and remove it if it exists
@@ -135,6 +135,7 @@ function needforspeed(chosen){
         var burrowlabel = document.createElement('label');
         burrowlabel.innerHTML = "Burrow";
         burrowlabel.setAttribute('for', 'burrowspeed');
+        burrowlabel.setAttribute('class', 'move');
         var burrowspeed = document.createElement('input');
         burrowspeed.type = 'text';
         burrowspeed.setAttribute('name', 'burrowspeed');
@@ -214,7 +215,7 @@ function falconpunch(chosen){
         var actions = Object.keys(chosen.Actions);
         for (var i = 0; i < Object.keys(chosen.Actions).length; i++){
             if (actions[i] === "Multiattack" || actions[i] === "Swallow" || actions[i] === "Ink Cloud" || actions[i] === "Whirlwind" || actions[i] === "Whelm"){
-                textarea.value = actions[i] + ": " + chosen.Actions[actions[i]];
+                textarea.value += actions[i] + ": " + chosen.Actions[actions[i]] + "\n\n";
             } else if (actions[i] === "Web"){
                 var attackrow = table.insertRow(0);
                 var attackname = attackrow.insertCell(0);
@@ -331,6 +332,7 @@ function displayWildShape(chosen){
     needforspeed(chosen);
     document.getElementById("maxhp").value = chosen.HP; // max hp
     document.getElementById("currenthp").value = chosen.HP; //currrent hp
+    document.getElementById("size").value = chosen.Size.charAt(0); //size
     falconpunch(chosen); // assign attacks
     falconfeat(chosen); //get features
     falconsense(chosen); //get senses
